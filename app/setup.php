@@ -1,0 +1,212 @@
+<?php
+
+/**
+ * Theme setup.
+ */
+
+namespace App;
+
+use Illuminate\Support\Facades\Vite;
+
+/**
+ * Set the environmetn type to staging.
+ *
+ * @return void
+ */
+//define( 'WP_ENVIRONMENT_TYPE', 'staging' );
+
+/**
+ * Inject styles into the block editor.
+ *
+ * @return array
+ */
+add_filter('block_editor_settings_all', function ($settings) {
+    $style = Vite::asset('resources/css/editor.css');
+
+    $settings['styles'][] = [
+        'css' => "@import url('{$style}')",
+    ];
+
+    return $settings;
+});
+
+/**
+ * Inject scripts into the block editor.
+ *
+ * @return void
+ */
+add_action('admin_head', function () {
+    if (! get_current_screen()?->is_block_editor()) {
+        return;
+    }
+
+    if (! Vite::isRunningHot()) {
+        $dependencies = json_decode(Vite::content('editor.deps.json'));
+
+        foreach ($dependencies as $dependency) {
+            if (! wp_script_is($dependency)) {
+                wp_enqueue_script($dependency);
+            }
+        }
+    }
+    echo Vite::withEntryPoints([
+        'resources/js/editor.js',
+    ])->toHtml();
+});
+
+/**
+ * Use the generated theme.json file.
+ *
+ * @return string
+ */
+add_filter('theme_file_path', function ($path, $file) {
+    return $file === 'theme.json'
+        ? public_path('build/assets/theme.json')
+        : $path;
+}, 10, 2);
+
+/**
+ * Disable on-demand block asset loading.
+ *
+ * @link https://core.trac.wordpress.org/ticket/61965
+ */
+add_filter('should_load_separate_core_block_assets', '__return_false');
+
+/**
+ * Register the initial theme setup.
+ *
+ * @return void
+ */
+add_action('after_setup_theme', function () {
+
+    /**
+     * Disable full-site editing support.
+     *
+     * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
+     */
+    remove_theme_support('block-templates');
+
+    /**
+     * Filter out the title on pages
+     *
+     */
+    // if (! is_admin()) {
+    //     add_filter('the_title', function (string $title, int $id): string {
+    //         return '';
+    //     }, 10, 2);
+    // }
+
+    /**
+     * Register the navigation menus.
+     *
+     * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
+     */
+    register_nav_menus([
+        'primary_navigation' => __('Primary Navigation', 'qr-code-manager'),
+    ]);
+
+    /**
+     * Disable the default block patterns.
+     *
+     * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-the-default-block-patterns
+     */
+    remove_theme_support('core-block-patterns');
+
+    /**
+     * Enable plugins to manage the document title.
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
+     */
+    add_theme_support('title-tag');
+
+    /**
+     * Enable post thumbnail support.
+     *
+     * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+     */
+    add_theme_support('post-thumbnails');
+
+    /**
+     * Enable responsive embed support.
+     *
+     * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
+     */
+    add_theme_support('responsive-embeds');
+
+    /**
+     * Enable HTML5 markup support.
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
+     */
+    add_theme_support('html5', [
+        'caption',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'search-form',
+        'script',
+        'style',
+    ]);
+
+    /**
+     * Enable selective refresh for widgets in customizer.
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+     */
+    add_theme_support('customize-selective-refresh-widgets');
+
+    /**
+     * Enable custom logo support.
+     *
+     * @link https://developer.wordpress.org/themes/functionality/custom-logo/
+     */
+    add_theme_support('custom-logo', [
+        'height'      => 80,
+        'width'       => 300,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ]);
+
+}, 20);
+
+/**
+ * Register the theme sidebars.
+ *
+ * @return void
+ */
+add_action('widgets_init', function () {
+    $config = [
+        'before_widget' => '<section class="widget %1$s %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ];
+
+    register_sidebar([
+        'name' => __('Primary', 'qr-code-manager'),
+        'id' => 'sidebar-primary',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer', 'qr-code-manager'),
+        'id' => 'sidebar-footer',
+    ] + $config);
+});
+
+
+add_action( 'publish_post', function( int $post_id ) {
+    $post = get_post( $post_id );
+
+
+
+    $response = wp_remote_post(
+        'https://graph.facebook.com/v19.0/1166762621570064/feed',
+        [
+            'body' => [
+                'message'      => wp_strip_all_tags( get_the_excerpt( $post ) ),
+                'link'         => get_permalink( $post_id ),
+                'access_token' => 'EAAQlKheYjBABRBwKkOQC472wptaFJuSrekflQpmXXzWZCiegkNNGHtDIMtf3vSVZCCI9nQa5LSyZCzDmHvxZCDZAvwVS5JRphAy69jrMAEkW3aTwqlH5X2HOGsv1ZB3ZC0ZBHnD9AEERK8mWIwe5b5EiWbf4fSUq8hR6RCio3BNsyVtn1Qy84oeEKkR4XNfn3VmueUh7FaNEVZAjZA15ATesErbQeSDZBIr8ZB6TEriN4ts0QNLD5MK4uZAV7PGJsf5bUjCsC2eV0gEibVDGiDZC4WFS8M4AZDZD',
+            ],
+        ]
+    );
+} );
