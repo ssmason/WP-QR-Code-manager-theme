@@ -17,6 +17,7 @@ export default defineConfig({
         'resources/css/app.css',
         'resources/js/app.js',
         'resources/css/editor.css',
+        'resources/css/landing-editor.css',
         'resources/js/editor.js',
       ],
       refresh: true,

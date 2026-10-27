@@ -1,0 +1,511 @@
+/*
+ * Landing styles — site header/footer patterns and the marketing pages
+ * (Home, Register) built from the theme's landing patterns.
+ *
+ * Owned by the theme so the public site keeps its look with or without the
+ * Satori Manifest plugin. Block classes used by the patterns:
+ *   .site-header, .site-footer             synced "Header" / "Footer" patterns
+ *   .landing-*                             landing page sections
+ *
+ * Page content is scoped to .landing (template-landing.blade.php) and to the
+ * block editor canvas so other theme pages are unaffected.
+ *
+ * Fonts (Fraunces, Manrope) are imported at the top of app.css / editor.css,
+ * because url() imports must precede all other rules.
+ */
+
+:root {
+  --landing-bg: #fbfbfe;
+  --landing-surface: #fff;
+  --landing-tint: #f1f2f9;
+  --landing-text: #1f2340;
+  --landing-muted: #5d6280;
+  --landing-accent: #4f46e5;
+  --landing-accent-text: #fff;
+  --landing-border: #e6e7f2;
+  --landing-radius: 18px;
+  --landing-wide: 74rem;
+  --landing-content: 46rem;
+  --landing-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --landing-shadow: 0 1px 2px rgb(31 35 64 / 0.04), 0 18px 40px -24px rgb(31 35 64 / 0.35);
+  --landing-font-heading: "Fraunces", georgia, serif;
+  --landing-font-body: "Manrope", system-ui, sans-serif;
+}
+
+/* ─── Header pattern ─────────────────────────────────────────────────────── */
+
+.header-theme {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--landing-border);
+  background: rgb(251 251 254 / 0.88);
+  backdrop-filter: saturate(1.4) blur(8px);
+  font-family: var(--landing-font-body);
+}
+
+.admin-bar .header-theme {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+.site-header {
+  max-width: var(--landing-wide);
+  margin-inline: auto;
+  padding: 1rem var(--landing-gutter);
+  gap: 1rem 2rem;
+  color: var(--landing-text);
+
+  & .wp-block-site-title {
+    margin: 0;
+    font-family: var(--landing-font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    & a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* QR mark beside the site name. */
+    & a::before {
+      content: "";
+      width: 2rem;
+      height: 2rem;
+      border-radius: 10px;
+      background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='7' rx='1'/%3E%3Crect x='14' y='3' width='7' height='7' rx='1'/%3E%3Crect x='3' y='14' width='7' height='7' rx='1'/%3E%3Cpath d='M14 14h3v3h-3zM17 17h4v4h-4'/%3E%3C/svg%3E") center / 60% no-repeat,
+        var(--landing-accent);
+    }
+  }
+
+  & .wp-block-navigation {
+    gap: 1.5rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+
+    & a:hover {
+      color: var(--landing-accent);
+    }
+  }
+
+  & .wp-block-buttons {
+    margin: 0;
+  }
+}
+
+/* ─── Footer pattern ─────────────────────────────────────────────────────── */
+
+.content-info {
+  background: var(--landing-tint);
+  color: var(--landing-text);
+  font-family: var(--landing-font-body);
+}
+
+.site-footer {
+  max-width: var(--landing-wide);
+  margin-inline: auto;
+  padding: clamp(2.5rem, 6vw, 4rem) var(--landing-gutter) 1.5rem;
+  font-size: 0.95rem;
+
+  & .wp-block-site-title {
+    margin: 0 0 0.25rem;
+    font-family: var(--landing-font-heading);
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  & .site-footer__heading {
+    margin: 0 0 0.75rem;
+    color: var(--landing-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  & p {
+    margin: 0 0 0.5rem;
+  }
+
+  & .site-footer__muted {
+    color: var(--landing-muted);
+    font-size: 0.85rem;
+  }
+
+  & .site-footer__bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--landing-border);
+    color: var(--landing-muted);
+    font-size: 0.8rem;
+  }
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--landing-accent);
+    }
+  }
+}
+
+/* ─── Shared buttons (header, footer, landing) ───────────────────────────── */
+
+.header-theme,
+.content-info,
+.landing,
+.editor-styles-wrapper {
+  & .wp-block-button__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.85em 1.5em;
+    border: 0;
+    border-radius: 999px;
+    background: var(--landing-accent);
+    color: var(--landing-accent-text);
+    font-family: var(--landing-font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    box-shadow: 0 10px 24px -12px var(--landing-accent);
+    transition: transform 0.15s ease, filter 0.15s ease;
+
+    &:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+  }
+
+  & .is-style-outline .wp-block-button__link {
+    border: 2px solid var(--landing-border);
+    background: transparent;
+    color: var(--landing-text);
+    box-shadow: none;
+  }
+}
+
+/* ─── Landing page content ───────────────────────────────────────────────── */
+
+.landing,
+.editor-styles-wrapper {
+  background: var(--landing-bg);
+  color: var(--landing-text);
+  font-family: var(--landing-font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+
+  & > *,
+  & .is-root-container > * {
+    max-width: var(--landing-content);
+    margin-inline: auto;
+    padding-inline: var(--landing-gutter);
+  }
+
+  & > .alignwide,
+  & .is-root-container > .alignwide {
+    max-width: var(--landing-wide);
+  }
+
+  & > .alignfull,
+  & .is-root-container > .alignfull {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  & h1,
+  & h2,
+  & h3 {
+    margin: 0 0 0.5em;
+    font-family: var(--landing-font-heading);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+  }
+
+  & h1 {
+    font-size: clamp(2.6rem, 6.5vw, 4.4rem);
+  }
+
+  & h2 {
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+  }
+
+  & h3 {
+    margin-bottom: 0.35em;
+    font-family: var(--landing-font-body);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  & p {
+    margin: 0 0 1em;
+  }
+
+  & a {
+    color: var(--landing-accent);
+  }
+
+  & .has-text-align-center {
+    text-align: center;
+  }
+
+  & .wp-block-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-block: 1.75rem 1rem;
+  }
+
+  & .wp-block-columns {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  & .landing-eyebrow {
+    margin-bottom: 0.75rem;
+    color: var(--landing-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  & .landing-lead {
+    max-width: 38rem;
+    color: var(--landing-muted);
+    font-size: 1.15rem;
+    line-height: 1.65;
+
+    &.has-text-align-center {
+      margin-inline: auto;
+    }
+  }
+
+  & .landing-small-print {
+    margin-top: 1.5rem;
+    color: var(--landing-muted);
+    font-size: 0.85rem;
+  }
+
+  & .landing-section {
+    padding-block: clamp(3.5rem, 9vw, 6.5rem);
+  }
+
+  & .landing-card {
+    padding: 1.75rem;
+    border: 1px solid var(--landing-border);
+    border-radius: var(--landing-radius);
+    background: var(--landing-surface);
+    box-shadow: var(--landing-shadow);
+
+    & p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Hero */
+  & .landing-hero {
+    padding: clamp(3rem, 8vw, 6rem) var(--landing-gutter);
+    background:
+      radial-gradient(60% 80% at 100% 0%, #fde8dd 0%, transparent 60%),
+      radial-gradient(70% 90% at 0% 100%, #e7e9ff 0%, transparent 60%),
+      var(--landing-bg);
+  }
+
+  & .landing-hero__inner {
+    max-width: var(--landing-wide);
+    margin: 0 auto;
+  }
+
+  & .landing-hero__art img {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  & .landing-hero__note {
+    color: var(--landing-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  /* Steps */
+  & .landing-step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--landing-accent) 12%, transparent);
+    color: var(--landing-accent);
+    font-weight: 800;
+  }
+
+  /* Tinted band */
+  & .landing-band {
+    padding-inline: var(--landing-gutter);
+    background: var(--landing-tint);
+
+    & > .landing-section {
+      max-width: var(--landing-wide);
+      margin-inline: auto;
+    }
+  }
+
+  & .landing-features {
+    & h3 {
+      position: relative;
+      padding-top: 1rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.75rem;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--landing-accent);
+      }
+    }
+
+    & p {
+      margin-bottom: 2rem;
+      color: var(--landing-muted);
+    }
+  }
+
+  /* Design cards */
+  & .landing-design-cards .landing-card {
+    position: relative;
+    overflow: hidden;
+    padding-top: 2.1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: var(--landing-card-tint, var(--landing-accent));
+    }
+
+    & h3 {
+      font-family: var(--landing-font-heading);
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  & .landing-card--atelier { --landing-card-tint: #a0704c; }
+  & .landing-card--studio { --landing-card-tint: #e4572e; }
+  & .landing-card--noir { --landing-card-tint: #c9a45c; }
+  & .landing-card--bloom { --landing-card-tint: #d46a84; }
+  & .landing-card--mono { --landing-card-tint: #161616; }
+
+  & .landing-card__tag {
+    margin-bottom: 0.5rem;
+    color: var(--landing-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  & .landing-card__link a {
+    color: var(--landing-card-tint, var(--landing-accent));
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* FAQ */
+  & .landing-faq .wp-block-details {
+    margin-bottom: 0.75rem;
+    padding: 1.1rem 1.4rem;
+    border: 1px solid var(--landing-border);
+    border-radius: 14px;
+    background: var(--landing-surface);
+
+    & summary {
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    & p {
+      margin: 0.75rem 0 0;
+      color: var(--landing-muted);
+    }
+  }
+
+  /* Closing call to action */
+  & .landing-cta {
+    padding: clamp(3.5rem, 9vw, 6rem) var(--landing-gutter);
+    background:
+      radial-gradient(80% 120% at 50% 0%, #3b37a8 0%, transparent 70%),
+      var(--landing-text);
+    color: #fff;
+
+    & h2 {
+      color: #fff;
+    }
+
+    & p {
+      color: #c9cbe8;
+    }
+
+    & .wp-block-buttons {
+      justify-content: center;
+    }
+
+    & .wp-block-button__link {
+      background: #fff;
+      color: var(--landing-text);
+      box-shadow: none;
+    }
+  }
+
+  /* Register page: the form block sits wider than the text column. */
+  & .landing-register-intro {
+    padding-block: clamp(3rem, 8vw, 5rem) 1.5rem;
+  }
+
+  & > .wp-block-satori-manifest-registration-form,
+  & .is-root-container > .wp-block-satori-manifest-registration-form {
+    max-width: 62rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/*
+ * Satori Manifest registration form (plugin block). The plugin ships complete
+ * styles driven by --sm-form-* custom properties; the theme only maps its
+ * landing palette and fonts onto them.
+ */
+.landing .wp-block-satori-manifest-registration-form,
+.editor-styles-wrapper .wp-block-satori-manifest-registration-form {
+  --sm-form-accent: var(--landing-accent);
+  --sm-form-accent-text: var(--landing-accent-text);
+  --sm-form-text: var(--landing-text);
+  --sm-form-muted: var(--landing-muted);
+  --sm-form-border: var(--landing-border);
+  --sm-form-field: var(--landing-bg);
+  --sm-form-surface: var(--landing-surface);
+  --sm-form-radius: var(--landing-radius);
+  --sm-form-font: var(--landing-font-body);
+  --sm-form-heading-font: var(--landing-font-heading);
+  --sm-form-shadow: var(--landing-shadow);
+}

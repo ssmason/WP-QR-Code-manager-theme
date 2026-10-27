@@ -31,6 +31,25 @@ add_filter('block_editor_settings_all', function ($settings) {
 });
 
 /**
+ * Inject the landing styles into the block editor, only for Landing-template pages.
+ *
+ * @return array
+ */
+add_filter('block_editor_settings_all', function ($settings, $context) {
+    $post = $context->post ?? null;
+
+    if ($post instanceof \WP_Post && get_page_template_slug($post) === 'template-landing.blade.php') {
+        $style = Vite::asset('resources/css/landing-editor.css');
+
+        $settings['styles'][] = [
+            'css' => "@import url('{$style}')",
+        ];
+    }
+
+    return $settings;
+}, 10, 2);
+
+/**
  * Inject scripts into the block editor.
  *
  * @return void
