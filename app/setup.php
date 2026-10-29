@@ -1,7 +1,12 @@
 <?php
-
 /**
- * Theme setup.
+ * Theme setup: supported features and block editor assets.
+ *
+ * The public marketing site (Home, Register) is built from block patterns in
+ * patterns/ and styled by resources/css/landing.css. Client price-list pages
+ * are rendered by the Satori Manifest plugin and never load theme assets.
+ *
+ * @package QrCodeManager
  */
 
 namespace App;
@@ -9,223 +14,117 @@ namespace App;
 use Illuminate\Support\Facades\Vite;
 
 /**
- * Set the environmetn type to staging.
- *
- * @return void
+ * Inject the base editor styles (Tailwind) into the block editor.
  */
-//define( 'WP_ENVIRONMENT_TYPE', 'staging' );
+add_filter(
+	'block_editor_settings_all',
+	function ( array $settings ): array {
+		$style = Vite::asset( 'resources/css/editor.css' );
+
+		$settings['styles'][] = array(
+			'css' => "@import url('{$style}')",
+		);
+
+		return $settings;
+	}
+);
 
 /**
- * Inject styles into the block editor.
- *
- * @return array
+ * Inject the editor scripts and their WordPress dependencies.
  */
-add_filter('block_editor_settings_all', function ($settings) {
-    $style = Vite::asset('resources/css/editor.css');
+add_action(
+	'admin_head',
+	function () {
+		if ( ! get_current_screen()?->is_block_editor() ) {
+			return;
+		}
 
-    $settings['styles'][] = [
-        'css' => "@import url('{$style}')",
-    ];
+		if ( ! Vite::isRunningHot() ) {
+			$dependencies = json_decode( Vite::content( 'editor.deps.json' ) );
 
-    return $settings;
-});
+			foreach ( $dependencies as $dependency ) {
+				if ( ! wp_script_is( $dependency ) ) {
+					wp_enqueue_script( $dependency );
+				}
+			}
+		}
 
-/**
- * Inject the landing styles into the block editor, only for Landing-template pages.
- *
- * @return array
- */
-add_filter('block_editor_settings_all', function ($settings, $context) {
-    $post = $context->post ?? null;
-
-    if ($post instanceof \WP_Post && get_page_template_slug($post) === 'template-landing.blade.php') {
-        $style = Vite::asset('resources/css/landing-editor.css');
-
-        $settings['styles'][] = [
-            'css' => "@import url('{$style}')",
-        ];
-    }
-
-    return $settings;
-}, 10, 2);
-
-/**
- * Inject scripts into the block editor.
- *
- * @return void
- */
-add_action('admin_head', function () {
-    if (! get_current_screen()?->is_block_editor()) {
-        return;
-    }
-
-    if (! Vite::isRunningHot()) {
-        $dependencies = json_decode(Vite::content('editor.deps.json'));
-
-        foreach ($dependencies as $dependency) {
-            if (! wp_script_is($dependency)) {
-                wp_enqueue_script($dependency);
-            }
-        }
-    }
-    echo Vite::withEntryPoints([
-        'resources/js/editor.js',
-    ])->toHtml();
-});
+		// Vite renders trusted script tags for the theme's own built assets.
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo Vite::withEntryPoints(
+			array(
+				'resources/js/editor.js',
+			)
+		)->toHtml();
+	}
+);
 
 /**
  * Use the generated theme.json file.
- *
- * @return string
  */
-add_filter('theme_file_path', function ($path, $file) {
-    return $file === 'theme.json'
-        ? public_path('build/assets/theme.json')
-        : $path;
-}, 10, 2);
+add_filter(
+	'theme_file_path',
+	function ( string $path, string $file ): string {
+		return 'theme.json' === $file
+		? public_path( 'build/assets/theme.json' )
+		: $path;
+	},
+	10,
+	2
+);
 
 /**
  * Disable on-demand block asset loading.
  *
  * @link https://core.trac.wordpress.org/ticket/61965
  */
-add_filter('should_load_separate_core_block_assets', '__return_false');
+add_filter( 'should_load_separate_core_block_assets', '__return_false' );
 
 /**
- * Register the initial theme setup.
- *
- * @return void
+ * Register the theme features.
  */
-add_action('after_setup_theme', function () {
+add_action(
+	'after_setup_theme',
+	function () {
+		// Classic (Blade) templates; no full-site editing.
+		remove_theme_support( 'block-templates' );
 
-    /**
-     * Disable full-site editing support.
-     *
-     * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
-     */
-    remove_theme_support('block-templates');
+		// Only the theme's own patterns appear in the inserter.
+		remove_theme_support( 'core-block-patterns' );
 
-    /**
-     * Filter out the title on pages
-     *
-     */
-    // if (! is_admin()) {
-    //     add_filter('the_title', function (string $title, int $id): string {
-    //         return '';
-    //     }, 10, 2);
-    // }
+		add_theme_support( 'title-tag' );
+		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'responsive-embeds' );
 
-    /**
-     * Register the navigation menus.
-     *
-     * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
-     */
-    register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'qr-code-manager'),
-    ]);
+		add_theme_support(
+			'html5',
+			array(
+				'caption',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'search-form',
+				'script',
+				'style',
+			)
+		);
 
-    /**
-     * Disable the default block patterns.
-     *
-     * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-the-default-block-patterns
-     */
-    remove_theme_support('core-block-patterns');
-
-    /**
-     * Enable plugins to manage the document title.
-     *
-     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
-     */
-    add_theme_support('title-tag');
-
-    /**
-     * Enable post thumbnail support.
-     *
-     * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-     */
-    add_theme_support('post-thumbnails');
-
-    /**
-     * Enable responsive embed support.
-     *
-     * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
-     */
-    add_theme_support('responsive-embeds');
-
-    /**
-     * Enable HTML5 markup support.
-     *
-     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
-     */
-    add_theme_support('html5', [
-        'caption',
-        'comment-form',
-        'comment-list',
-        'gallery',
-        'search-form',
-        'script',
-        'style',
-    ]);
-
-    /**
-     * Enable selective refresh for widgets in customizer.
-     *
-     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
-     */
-    add_theme_support('customize-selective-refresh-widgets');
-
-    /**
-     * Enable custom logo support.
-     *
-     * @link https://developer.wordpress.org/themes/functionality/custom-logo/
-     */
-    add_theme_support('custom-logo', [
-        'height'      => 80,
-        'width'       => 300,
-        'flex-height' => true,
-        'flex-width'  => true,
-    ]);
-
-}, 20);
-
-/**
- * Register the theme sidebars.
- *
- * @return void
- */
-add_action('widgets_init', function () {
-    $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
-    ];
-
-    register_sidebar([
-        'name' => __('Primary', 'qr-code-manager'),
-        'id' => 'sidebar-primary',
-    ] + $config);
-
-    register_sidebar([
-        'name' => __('Footer', 'qr-code-manager'),
-        'id' => 'sidebar-footer',
-    ] + $config);
-});
-
-
-add_action( 'publish_post', function( int $post_id ) {
-    $post = get_post( $post_id );
-
-
-
-    $response = wp_remote_post(
-        'https://graph.facebook.com/v19.0/1166762621570064/feed',
-        [
-            'body' => [
-                'message'      => wp_strip_all_tags( get_the_excerpt( $post ) ),
-                'link'         => get_permalink( $post_id ),
-                'access_token' => 'EAAQlKheYjBABRBwKkOQC472wptaFJuSrekflQpmXXzWZCiegkNNGHtDIMtf3vSVZCCI9nQa5LSyZCzDmHvxZCDZAvwVS5JRphAy69jrMAEkW3aTwqlH5X2HOGsv1ZB3ZC0ZBHnD9AEERK8mWIwe5b5EiWbf4fSUq8hR6RCio3BNsyVtn1Qy84oeEKkR4XNfn3VmueUh7FaNEVZAjZA15ATesErbQeSDZBIr8ZB6TEriN4ts0QNLD5MK4uZAV7PGJsf5bUjCsC2eV0gEibVDGiDZC4WFS8M4AZDZD',
-            ],
-        ]
-    );
-} );
+		/**
+		 * The site logo (Appearance → Customize → Site Identity) is the mark in
+		 * the header pattern; the Satori Manifest plugin also uses it as a
+		 * fallback logo on the login screen and in emails.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/custom-logo/
+		 */
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 80,
+				'width'       => 300,
+				'flex-height' => true,
+				'flex-width'  => true,
+			)
+		);
+	},
+	20
+);

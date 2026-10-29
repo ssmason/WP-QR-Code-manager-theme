@@ -10,26 +10,46 @@
  * Page content is scoped to .landing (template-landing.blade.php) and to the
  * block editor canvas so other theme pages are unaffected.
  *
- * Fonts (Fraunces, Manrope) are imported at the top of app.css / editor.css,
- * because url() imports must precede all other rules.
+ * Palette and type follow the Satori Digital brand: ink navy, amber accents,
+ * Fraunces headings, Inter body text and JetBrains Mono for small labels.
+ * Fonts are imported at the top of app.css / landing-editor.css, because
+ * url() imports must precede all other rules.
  */
 
 :root {
-  --landing-bg: #fbfbfe;
+  /* Colour */
+  --landing-bg: #faf8f4;
   --landing-surface: #fff;
-  --landing-tint: #f1f2f9;
-  --landing-text: #1f2340;
-  --landing-muted: #5d6280;
-  --landing-accent: #4f46e5;
-  --landing-accent-text: #fff;
-  --landing-border: #e6e7f2;
-  --landing-radius: 18px;
+  --landing-tint: #f2eee6;
+  --landing-text: #0b1620;
+  --landing-ink-soft: #132632;
+  --landing-muted: #4f5d68;
+  --landing-steel: #afc2cc;
+  --landing-accent: #f2a65a;
+  --landing-accent-text: #0b1620;
+  --landing-accent-strong: #8a4f0f;
+  --landing-border: #e6e0d6;
+
+  /* Shape and layout */
+  --landing-radius: 16px;
   --landing-wide: 74rem;
   --landing-content: 46rem;
   --landing-gutter: clamp(1.25rem, 4vw, 2.5rem);
-  --landing-shadow: 0 1px 2px rgb(31 35 64 / 0.04), 0 18px 40px -24px rgb(31 35 64 / 0.35);
+
+  /* One container for header, footer and wide sections, so every left and
+     right edge lines up: full width minus the gutters, capped at --landing-wide. */
+  --landing-container: min(100% - 2 * var(--landing-gutter), var(--landing-wide));
+
+  /* Warm sand of the hero glow, used solid for the header, and a lighter
+     version for alternate page sections. */
+  --landing-header-bg: #f8e6d2;
+  --landing-sand-light: #fcf2e8;
+  --landing-shadow: 0 1px 2px rgb(11 22 32 / 0.04), 0 18px 40px -24px rgb(11 22 32 / 0.35);
+
+  /* Type */
   --landing-font-heading: "Fraunces", georgia, serif;
-  --landing-font-body: "Manrope", system-ui, sans-serif;
+  --landing-font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --landing-font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", menlo, monospace;
 }
 
 /* ─── Header pattern ─────────────────────────────────────────────────────── */
@@ -39,8 +59,9 @@
   top: 0;
   z-index: 50;
   border-bottom: 1px solid var(--landing-border);
-  background: rgb(251 251 254 / 0.88);
-  backdrop-filter: saturate(1.4) blur(8px);
+  border-bottom-color: rgb(138 79 15 / 0.12);
+  background: var(--landing-header-bg);
+  backdrop-filter: saturate(1.4) blur(10px);
   font-family: var(--landing-font-body);
 }
 
@@ -49,46 +70,68 @@
 }
 
 .site-header {
-  max-width: var(--landing-wide);
+  width: var(--landing-container);
   margin-inline: auto;
-  padding: 1rem var(--landing-gutter);
+  padding: 0.85rem 0;
   gap: 1rem 2rem;
   color: var(--landing-text);
+
+  /* Logo mark + name + "by Satori Digital". */
+  & .site-header__brand {
+    gap: 0.75rem;
+  }
+
+  & .wp-block-site-logo img {
+    width: auto;
+    height: 2.6rem;
+  }
 
   & .wp-block-site-title {
     margin: 0;
     font-family: var(--landing-font-heading);
     font-size: 1.3rem;
     font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
 
     & a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
       color: inherit;
       text-decoration: none;
     }
+  }
 
-    /* QR mark beside the site name. */
-    & a::before {
-      content: "";
-      width: 2rem;
-      height: 2rem;
-      border-radius: 10px;
-      background:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='7' rx='1'/%3E%3Crect x='14' y='3' width='7' height='7' rx='1'/%3E%3Crect x='3' y='14' width='7' height='7' rx='1'/%3E%3Cpath d='M14 14h3v3h-3zM17 17h4v4h-4'/%3E%3C/svg%3E") center / 60% no-repeat,
-        var(--landing-accent);
+  & .site-header__by {
+    margin: 0.1rem 0 0;
+    color: var(--landing-muted);
+    font-family: var(--landing-font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--landing-accent-strong);
+      }
     }
   }
 
   & .wp-block-navigation {
-    gap: 1.5rem;
+    gap: 1.6rem;
     font-size: 0.92rem;
     font-weight: 500;
 
     & a:hover {
-      color: var(--landing-accent);
+      color: var(--landing-accent-strong);
     }
+  }
+
+  & .wp-block-navigation__responsive-container.is-menu-open {
+    padding: 1.5rem var(--landing-gutter);
+    background: var(--landing-header-bg);
+    font-size: 1.15rem;
   }
 
   & .wp-block-buttons {
@@ -99,21 +142,26 @@
 /* ─── Footer pattern ─────────────────────────────────────────────────────── */
 
 .content-info {
-  background: var(--landing-tint);
-  color: var(--landing-text);
+  background: var(--landing-text);
+  color: var(--landing-steel);
   font-family: var(--landing-font-body);
 }
 
 .site-footer {
-  max-width: var(--landing-wide);
+  width: var(--landing-container);
   margin-inline: auto;
-  padding: clamp(2.5rem, 6vw, 4rem) var(--landing-gutter) 1.5rem;
+  padding: clamp(2.25rem, 5vw, 3rem) 0 1.25rem;
   font-size: 0.95rem;
 
+  & .wp-block-columns {
+    gap: 2rem;
+  }
+
   & .wp-block-site-title {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.35rem;
+    color: #fff;
     font-family: var(--landing-font-heading);
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: 600;
 
     & a {
@@ -123,38 +171,57 @@
   }
 
   & .site-footer__heading {
-    margin: 0 0 0.75rem;
-    color: var(--landing-muted);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
+    margin: 0 0 0.85rem;
+    color: var(--landing-accent);
+    font-family: var(--landing-font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
   }
 
   & p {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.55rem;
   }
 
   & .site-footer__muted {
-    color: var(--landing-muted);
-    font-size: 0.85rem;
+    max-width: 18rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  /* Logo heads the brand column, above the name and strapline. */
+  & .site-footer__logo {
+    margin: 0 0 1rem;
+
+    & img {
+      width: auto;
+      height: 3.75rem;
+    }
   }
 
   & .site-footer__bottom {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     padding-top: 1.25rem;
-    border-top: 1px solid var(--landing-border);
-    color: var(--landing-muted);
+    border-top: 1px solid rgb(175 194 204 / 0.18);
     font-size: 0.8rem;
   }
 
   & a {
-    color: inherit;
+    color: #fff;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: var(--landing-accent);
     }
+  }
+
+  /* External links open in a new window — say so with an arrow. */
+  & a[target="_blank"]:not(:has(img))::after {
+    content: " ↗";
+    font-size: 0.8em;
+    opacity: 0.6;
   }
 }
 
@@ -167,8 +234,9 @@
   & .wp-block-button__link {
     display: inline-flex;
     align-items: center;
-    padding: 0.85em 1.5em;
-    border: 0;
+    gap: 0.5em;
+    padding: 0.9em 1.6em;
+    border: 2px solid transparent;
     border-radius: 999px;
     background: var(--landing-accent);
     color: var(--landing-accent-text);
@@ -177,20 +245,30 @@
     font-weight: 600;
     line-height: 1.2;
     text-decoration: none;
-    box-shadow: 0 10px 24px -12px var(--landing-accent);
-    transition: transform 0.15s ease, filter 0.15s ease;
+    box-shadow: 0 12px 24px -14px rgb(217 138 58 / 0.9);
+    transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
 
     &:hover {
-      filter: brightness(1.08);
+      background: #f5b574;
       transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--landing-text);
+      outline-offset: 3px;
     }
   }
 
   & .is-style-outline .wp-block-button__link {
-    border: 2px solid var(--landing-border);
+    border-color: var(--landing-text);
     background: transparent;
     color: var(--landing-text);
     box-shadow: none;
+
+    &:hover {
+      background: var(--landing-text);
+      color: #fff;
+    }
   }
 }
 
@@ -214,7 +292,9 @@
 
   & > .alignwide,
   & .is-root-container > .alignwide {
-    max-width: var(--landing-wide);
+    width: var(--landing-container);
+    max-width: none;
+    padding-inline: 0;
   }
 
   & > .alignfull,
@@ -234,11 +314,11 @@
   }
 
   & h1 {
-    font-size: clamp(2.6rem, 6.5vw, 4.4rem);
+    font-size: clamp(2.5rem, 6.5vw, 4.4rem);
   }
 
   & h2 {
-    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-size: clamp(1.85rem, 4vw, 2.8rem);
   }
 
   & h3 {
@@ -253,8 +333,18 @@
     margin: 0 0 1em;
   }
 
+  /* Top-level text blocks stay centred in the column (the margins above
+     would otherwise override the column's auto margins). */
+  & > p,
+  & > h1,
+  & > h2,
+  & > h3,
+  & .is-root-container > p {
+    margin-inline: auto;
+  }
+
   & a {
-    color: var(--landing-accent);
+    color: var(--landing-accent-strong);
   }
 
   & .has-text-align-center {
@@ -273,12 +363,14 @@
     margin-top: 2.5rem;
   }
 
+  /* Small mono label above headings, e.g. "HOW IT WORKS". */
   & .landing-eyebrow {
-    margin-bottom: 0.75rem;
-    color: var(--landing-accent);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
+    margin-bottom: 0.85rem;
+    color: var(--landing-accent-strong);
+    font-family: var(--landing-font-mono);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
@@ -300,7 +392,20 @@
   }
 
   & .landing-section {
-    padding-block: clamp(3.5rem, 9vw, 6.5rem);
+    padding-block: clamp(3rem, 7vw, 5rem);
+  }
+
+  /* Menu links (#how-it-works, #designs, #faq) land below the sticky header. */
+  & [id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  /* Sand band behind a section, running edge to edge of the window while the
+     content keeps the container width. */
+  & .landing-section--sand {
+    background: var(--landing-sand-light);
+    box-shadow: 0 0 0 100vmax var(--landing-sand-light);
+    clip-path: inset(0 -100vmax);
   }
 
   & .landing-card {
@@ -317,10 +422,10 @@
 
   /* Hero */
   & .landing-hero {
-    padding: clamp(3rem, 8vw, 6rem) var(--landing-gutter);
+    padding: clamp(2.5rem, 7vw, 5.5rem) var(--landing-gutter) clamp(3rem, 8vw, 6rem);
     background:
-      radial-gradient(60% 80% at 100% 0%, #fde8dd 0%, transparent 60%),
-      radial-gradient(70% 90% at 0% 100%, #e7e9ff 0%, transparent 60%),
+      radial-gradient(55% 70% at 95% 15%, rgb(242 166 90 / 0.22) 0%, transparent 65%),
+      radial-gradient(45% 55% at 5% 35%, rgb(19 38 50 / 0.07) 0%, transparent 70%),
       var(--landing-bg);
   }
 
@@ -329,31 +434,39 @@
     margin: 0 auto;
   }
 
+  & .landing-hero h1 {
+    max-width: 12ch;
+  }
+
   & .landing-hero__art img {
     display: block;
     width: 100%;
-    max-width: 520px;
+    max-width: 500px;
     margin-inline: auto;
   }
 
   & .landing-hero__note {
     color: var(--landing-muted);
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-family: var(--landing-font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
   }
 
-  /* Steps */
+  /* Steps: a large mono number in amber, like a spec sheet. */
+  & .landing-steps .landing-card {
+    position: relative;
+    padding-top: 2rem;
+    border-top: 3px solid var(--landing-accent);
+  }
+
   & .landing-step {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-bottom: 1rem;
-    border-radius: 12px;
-    background: color-mix(in srgb, var(--landing-accent) 12%, transparent);
-    color: var(--landing-accent);
-    font-weight: 800;
+    margin: 0 0 1.1rem;
+    color: var(--landing-accent-strong);
+    font-family: var(--landing-font-mono);
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.04em;
   }
 
   /* Tinted band */
@@ -420,33 +533,115 @@
   & .landing-card__tag {
     margin-bottom: 0.5rem;
     color: var(--landing-muted);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-family: var(--landing-font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   & .landing-card__link a {
-    color: var(--landing-card-tint, var(--landing-accent));
+    color: var(--landing-text);
     font-weight: 700;
     text-decoration: none;
+    border-bottom: 2px solid var(--landing-card-tint, var(--landing-accent));
+
+    &:hover {
+      color: var(--landing-accent-strong);
+    }
   }
 
-  /* FAQ */
+  /* FAQ: intro on the left, the questions as one divided list on the right
+     (stacks on phones). Each question opens with WordPress's Details block. */
+  & .landing-faq__layout {
+    gap: clamp(2rem, 6vw, 5rem);
+    margin-top: 0;
+  }
+
+  & .landing-faq__intro {
+    & h2 {
+      margin-bottom: 0.4em;
+    }
+
+    & .landing-lead {
+      font-size: 1.05rem;
+    }
+  }
+
+  & .landing-faq__ask {
+    margin-top: 1.5rem;
+    color: var(--landing-muted);
+    font-weight: 600;
+
+    & a {
+      color: var(--landing-text);
+      text-decoration: none;
+      border-bottom: 2px solid var(--landing-accent);
+
+      &:hover {
+        color: var(--landing-accent-strong);
+      }
+
+      &::after {
+        content: " ↗";
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  & .landing-faq__list {
+    border-top: 1px solid var(--landing-border);
+  }
+
   & .landing-faq .wp-block-details {
-    margin-bottom: 0.75rem;
-    padding: 1.1rem 1.4rem;
-    border: 1px solid var(--landing-border);
-    border-radius: 14px;
-    background: var(--landing-surface);
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--landing-border);
 
     & summary {
-      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.2rem 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      list-style: none;
       cursor: pointer;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      /* Amber plus that turns into a minus when open. */
+      &::after {
+        content: "+";
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        width: 1.9rem;
+        height: 1.9rem;
+        border-radius: 50%;
+        background: rgb(242 166 90 / 0.18);
+        color: var(--landing-accent-strong);
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1;
+        transition: background-color 0.15s ease;
+      }
+
+      &:hover::after {
+        background: var(--landing-accent);
+        color: var(--landing-accent-text);
+      }
+    }
+
+    &[open] summary::after {
+      content: "−";
     }
 
     & p {
-      margin: 0.75rem 0 0;
+      max-width: 40rem;
+      margin: 0 0 1.25rem;
       color: var(--landing-muted);
     }
   }
@@ -455,8 +650,8 @@
   & .landing-cta {
     padding: clamp(3.5rem, 9vw, 6rem) var(--landing-gutter);
     background:
-      radial-gradient(80% 120% at 50% 0%, #3b37a8 0%, transparent 70%),
-      var(--landing-text);
+      radial-gradient(60% 120% at 50% 0%, rgb(242 166 90 / 0.18) 0%, transparent 70%),
+      var(--landing-ink-soft);
     color: #fff;
 
     & h2 {
@@ -464,29 +659,97 @@
     }
 
     & p {
-      color: #c9cbe8;
+      color: var(--landing-steel);
     }
 
     & .wp-block-buttons {
       justify-content: center;
     }
-
-    & .wp-block-button__link {
-      background: #fff;
-      color: var(--landing-text);
-      box-shadow: none;
-    }
   }
 
-  /* Register page: the form block sits wider than the text column. */
+  /* Register page: intro, form and small print share the site container,
+     so their edges line up with the header and footer. */
   & .landing-register-intro {
     padding-block: clamp(3rem, 8vw, 5rem) 1.5rem;
   }
 
+  & > .landing-register-intro,
+  & > .landing-small-print,
+  & .is-root-container > .landing-register-intro {
+    width: var(--landing-container);
+    max-width: none;
+    padding-inline: 0;
+  }
+
   & > .wp-block-satori-manifest-registration-form,
   & .is-root-container > .wp-block-satori-manifest-registration-form {
-    max-width: 62rem;
+    width: var(--landing-container);
+    max-width: none;
+    padding-inline: 0;
     padding-bottom: 2rem;
+  }
+}
+
+/* ─── Small screens ──────────────────────────────────────────────────────── */
+
+@media (max-width: 781px) {
+  .landing {
+    & .landing-hero__inner {
+      gap: 2rem;
+    }
+
+    /* Phone illustration: smaller and below the text on mobile. */
+    & .landing-hero__art img {
+      max-width: 320px;
+    }
+
+    & .landing-hero .wp-block-buttons {
+      flex-direction: column;
+      align-items: stretch;
+
+      & .wp-block-button__link {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+/* Phones: the menu collapses (below 600px), so brand, menu button and
+   Register fit on one row. */
+@media (max-width: 599px) {
+  .site-header {
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+
+    & .site-header__brand {
+      gap: 0.5rem;
+      min-width: 0;
+    }
+
+    & .site-header__by {
+      display: none;
+    }
+
+    & .wp-block-site-logo img {
+      height: 2rem;
+    }
+
+    & .wp-block-site-title {
+      font-size: 1.05rem;
+      white-space: nowrap;
+    }
+
+    & .site-header__actions {
+      flex-wrap: nowrap;
+      gap: 0.75rem;
+    }
+
+    & .wp-block-button__link {
+      padding: 0.65em 1.1em;
+      font-size: 0.88rem;
+    }
   }
 }
 
@@ -499,6 +762,7 @@
 .editor-styles-wrapper .wp-block-satori-manifest-registration-form {
   --sm-form-accent: var(--landing-accent);
   --sm-form-accent-text: var(--landing-accent-text);
+  --sm-form-accent-strong: var(--landing-accent-strong);
   --sm-form-text: var(--landing-text);
   --sm-form-muted: var(--landing-muted);
   --sm-form-border: var(--landing-border);

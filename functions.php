@@ -1,61 +1,48 @@
 <?php
+/**
+ * Theme bootstrap.
+ *
+ * Loads Composer's autoloader, boots Acorn (Sage's Laravel container) with
+ * the theme service provider, then includes app/setup.php and
+ * app/filters.php. Everything else lives in classes under app/.
+ *
+ * @package QrCodeManager
+ */
 
 use App\Providers\ThemeServiceProvider;
 use Roots\Acorn\Application;
 
-/*
-|--------------------------------------------------------------------------
-| Register The Auto Loader
-|--------------------------------------------------------------------------
-|
-| Composer provides a convenient, automatically generated class loader for
-| our theme. We will simply require it into the script here so that we
-| don't have to worry about manually loading any of our classes later on.
-|
-*/
+$qr_code_manager_autoload = __DIR__ . '/vendor/autoload.php';
 
-if (! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
-    wp_die(__('Error locating autoloader. Please run <code>composer install</code>.', 'qr-code-manager'));
+if ( ! file_exists( $qr_code_manager_autoload ) ) {
+	wp_die( esc_html__( 'Error locating the autoloader. Please run composer install in the theme folder.', 'qr-code-manager' ) );
 }
 
-require $composer;
+require $qr_code_manager_autoload;
 
 /*
-|--------------------------------------------------------------------------
-| Register The Bootloader
-|--------------------------------------------------------------------------
-|
-| The first thing we will do is schedule a new Acorn application container
-| to boot when WordPress is finished loading the theme. The application
-| serves as the "glue" for all the components of Laravel and is
-| the IoC container for the system binding all of the various parts.
-|
-*/
-
+ * Boot Acorn when WordPress has loaded the theme. The service provider
+ * registers the theme's hooks and WP-CLI commands.
+ */
 Application::configure()
-    ->withProviders([
-        ThemeServiceProvider::class,
-    ])
-    ->boot();
+	->withProviders(
+		array(
+			ThemeServiceProvider::class,
+		)
+	)
+	->boot();
 
 /*
-|--------------------------------------------------------------------------
-| Register Sage Theme Files
-|--------------------------------------------------------------------------
-|
-| Out of the box, Sage ships with categorically named theme files
-| containing common functionality and setup to be bootstrapped with your
-| theme. Simply add (or remove) files from the array below to change what
-| is registered alongside Sage.
-|
-*/
-
-collect(['setup', 'filters'])
-    ->each(function ($file) {
-        if (! locate_template($file = "app/{$file}.php", true, true)) {
-            wp_die(
-                /* translators: %s is replaced with the relative file path */
-                sprintf(__('Error locating <code>%s</code> for inclusion.', 'qr-code-manager'), $file)
-            );
-        }
-    });
+ * Theme hook files (app/setup.php, app/filters.php).
+ */
+foreach ( array( 'setup', 'filters' ) as $qr_code_manager_file ) {
+	if ( ! locate_template( "app/{$qr_code_manager_file}.php", true, true ) ) {
+		wp_die(
+			sprintf(
+				/* translators: %s: relative file path. */
+				esc_html__( 'Error locating %s for inclusion.', 'qr-code-manager' ),
+				esc_html( "app/{$qr_code_manager_file}.php" )
+			)
+		);
+	}
+}

@@ -3,12 +3,25 @@
  * Title: Site header
  * Slug: qr-code-manager/header
  * Categories: header
- * Description: Logo/site name, navigation, log in and Register button. Saved as the synced pattern "Header", which the theme layout renders.
+ * Description: Logo, site name with "by Satori Digital", navigation, log in and Register button. Saved as the synced pattern "Header", which the theme layout renders.
  * Inserter: true
+ *
+ * @package QrCodeManager
  */
+
 ?>
 <!-- wp:group {"className":"site-header","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-<div class="wp-block-group site-header"><!-- wp:site-title {"level":0} /-->
+<div class="wp-block-group site-header"><!-- wp:group {"className":"site-header__brand","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group site-header__brand"><!-- wp:site-logo {"width":40,"shouldSyncIcon":false} /-->
+
+<!-- wp:group {"className":"site-header__name","layout":{"type":"default"}} -->
+<div class="wp-block-group site-header__name"><!-- wp:site-title {"level":0} /-->
+
+<!-- wp:paragraph {"className":"site-header__by"} -->
+<p class="site-header__by">by <a href="https://satori-digital.com/" target="_blank" rel="noreferrer noopener">Satori Digital</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
 
 <!-- wp:group {"className":"site-header__actions","layout":{"type":"flex","flexWrap":"wrap"}} -->
 <div class="wp-block-group site-header__actions"><!-- wp:navigation {"overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right"}} -->

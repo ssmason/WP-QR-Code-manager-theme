@@ -4,3 +4,7 @@
 !/public/.gitkeep
 .env
 npm-debug.log
+.DS_Store
+
+# Claude Code: the shared .claude/ folder is committed; personal settings are not.
+/.claude/settings.local.json

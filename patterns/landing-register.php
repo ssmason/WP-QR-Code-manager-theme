@@ -5,7 +5,10 @@
  * Categories: featured
  * Description: Registration page intro with the Satori Manifest registration form block. Use with the Landing page template.
  * Inserter: true
+ *
+ * @package QrCodeManager
  */
+
 ?>
 <!-- wp:group {"className":"landing-section landing-register-intro"} -->
 <div class="wp-block-group landing-section landing-register-intro"><!-- wp:paragraph {"className":"landing-eyebrow"} -->

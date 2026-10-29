@@ -1,42 +1,94 @@
-<p align="center">
-  <a href="https://roots.io/sage/"><img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100"></a>
-</p>
+# QR Code Manager — theme
 
-<p align="center">
-  <a href="https://packagist.org/packages/roots/sage"><img alt="Packagist Installs" src="https://img.shields.io/packagist/dt/roots/sage?label=projects%20created&colorB=2b3072&colorA=525ddc&style=flat-square"></a>
-  <a href="https://github.com/roots/sage/actions/workflows/main.yml"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/sage/main.yml?branch=main&logo=github&label=CI&style=flat-square"></a>
-  <a href="https://twitter.com/rootswp"><img alt="Follow Roots" src="https://img.shields.io/badge/follow%20@rootswp-1da1f2?logo=twitter&logoColor=ffffff&message=&style=flat-square"></a>
-  <a href="https://github.com/sponsors/roots"><img src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&style=flat-square&logoColor=ffffff&message=" alt="Sponsor Roots"></a>
-</p>
+The public marketing site for **QR Code Manager** (Home, Register, header and footer),
+in the Satori Digital brand. Built on [Sage](https://roots.io/sage/) (Acorn, Blade,
+Vite, Tailwind v4).
 
-# Sage
+The theme only owns the marketing site. Client price-list pages, the registration form
+block, the client portal, payments and email all belong to the **Satori Manifest**
+plugin, which works with any theme. With the plugin deactivated, Home and Register keep
+their look.
 
-**Advanced hybrid WordPress starter theme with Laravel Blade and Tailwind CSS**
+---
 
-- 🔧 Clean, efficient theme templating with Laravel Blade
-- ⚡️ Modern front-end development workflow powered by Vite
-- 🎨 Out of the box support for Tailwind CSS
-- 🚀 Harness the power of Laravel with [Acorn integration](https://github.com/roots/acorn)
-- 📦 Block editor support built-in
+## Getting started
 
-Sage brings proper PHP templating and modern JavaScript tooling to WordPress themes. Write organized, component-based code using Laravel Blade, enjoy instant builds and CSS hot-reloading with Vite, and leverage Laravel's robust feature set through Acorn.
+```bash
+composer install
+npm install
+npm run build         # production assets → public/build/
+npm run dev           # Vite dev server with hot reload
+```
 
-[Read the docs to get started](https://roots.io/sage/docs/installation/)
+After changing a pattern in `patterns/` (or rebuilding images it uses), copy the
+patterns into the site:
 
-## Support us
+```bash
+wp qr-code-manager sync-patterns
+```
 
-Roots is an independent open source org, supported only by developers like you. Your sponsorship funds [WP Packages](https://wp-packages.org/) and the entire Roots ecosystem, and keeps them independent. Support us by purchasing [Radicle](https://roots.io/radicle/) or [sponsoring us on GitHub](https://github.com/sponsors/roots) — sponsors get access to our private Discord.
+This updates the synced **Header** and **Footer** patterns and the **Home** and
+**Register** pages (creating any that are missing, and setting Home as the front page).
+It overwrites edits made to those four in wp-admin — the files are the source of truth.
 
-### Sponsors
+---
 
-<a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="120" height="90"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="120" height="90"></a> <a href="https://www.itineris.co.uk/"><img src="https://cdn.roots.io/app/uploads/itineris.svg" alt="Itineris" width="120" height="90"></a> <a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="120" height="90"></a> <a href="https://40q.agency/"><img src="https://cdn.roots.io/app/uploads/40q.svg" alt="40Q" width="120" height="90"></a>
+## How it fits together
 
-## Community
+| Piece | Where |
+|---|---|
+| Home and Register | Pages using the **Landing** template (`resources/views/template-landing.blade.php`); content from `patterns/landing-home.php`, `patterns/landing-register.php` |
+| Header and footer | Synced patterns "Header" and "Footer" (Appearance → Patterns), sources `patterns/header.php`, `patterns/footer.php`; rendered by `sections/header` and `sections/footer` via `App\View\Composers\SiteChrome` |
+| Styles | `resources/css/landing.css` (all marketing styles, scoped to `.landing` and the header/footer), imported by `app.css`; `landing-editor.css` loads the same styles in the editor for Landing pages only |
+| Logo | Site logo (Customizer → Site Identity) — the 悟り mark in the header. The footer uses `resources/images/brand/satori-logo-white.png` |
+| Registration form | The plugin's block; the theme restyles it only through its `--sm-form-*` CSS variables (bottom of `landing.css`) |
 
-Keep track of development and community news.
+**Access** — only administrators can edit or delete Landing pages
+(`App\Landing\LandingAccess`).
 
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Join us on [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Follow the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+**Brand** — ink navy and amber, Fraunces headings, Inter text, JetBrains Mono labels,
+shared with satori-digital.com and 3dprinting.satori-digital.com. The tokens are at the
+top of `landing.css` (`--landing-*`) and in `app.css` (`@theme`, for Tailwind utilities).
+
+**Links** — external links (Satori Digital, Satori 3D Printing, QR code help) open in a
+new window with `rel="noreferrer noopener"`, and get a small ↗ in the footer.
+
+---
+
+## Directory structure
+
+```
+functions.php               boots Composer, Acorn and app/setup.php, app/filters.php
+app/
+  setup.php                 theme supports, editor assets, theme.json
+  filters.php               small WordPress filters
+  Providers/                ThemeServiceProvider — registers the classes below and WP-CLI
+  Landing/                  LandingAccess (admins only), LandingEditorStyles
+  Patterns/                 SyncedPattern (find/render), PatternSync (files → site)
+  Console/                  SyncPatternsCommand (wp qr-code-manager sync-patterns)
+  View/Composers/           App, Post, Comments (Sage defaults), SiteChrome (header/footer)
+patterns/                   header, footer, landing-home, landing-register
+resources/
+  css/                      app.css, landing.css, landing-editor.css, editor.css
+  js/                       app.js, editor.js
+  images/brand/             Satori logo variants and site icon
+  images/landing/           hero illustration
+  views/                    Blade templates (layouts, sections, partials, Landing template)
+theme.json                  editor settings (built into public/build/assets/theme.json)
+```
+
+---
+
+## Coding standards
+
+The theme follows the **WordPress Coding Standards** (`phpcs.xml`), like the plugin,
+with three framework allowances documented in the ruleset: PSR-4 class file names, the
+`App\` namespace, and camelCase methods on Acorn view composers (they become Blade
+variables).
+
+```bash
+composer lint        # vendor/bin/phpcs
+composer lint:fix    # vendor/bin/phpcbf
+```
+
+Blade templates use Tailwind utilities and `__()` for strings.

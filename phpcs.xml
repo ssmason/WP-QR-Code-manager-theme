@@ -1,19 +1,65 @@
 <?xml version="1.0"?>
-<ruleset name="Sage theme">
-    <description>PHPCS for Sage theme</description>
+<!--
+	QR Code Manager theme — PHP coding standard.
 
-    <file>.</file>
+	The theme follows the WordPress Coding Standards (like the Satori Manifest
+	plugin). Two framework conventions are allowed:
+	  - class files are named after their class (PSR-4 autoloading, App\ → app/);
+	  - Acorn view composers use camelCase methods, because each method name
+	    becomes a variable in the Blade view ($siteName, $title…).
+	  - classes live in Sage's App\ namespace (Acorn discovers composers there).
+	Blade templates (resources/views) are not PHP files and are not checked.
 
-    <exclude-pattern>*/vendor/*</exclude-pattern>
-    <exclude-pattern>*/node_modules/*</exclude-pattern>
-    <exclude-pattern>*/public/build/*</exclude-pattern>
+	Run: vendor/bin/phpcs   |   fix: vendor/bin/phpcbf
+-->
+<ruleset name="QR Code Manager theme">
+	<description>WordPress Coding Standards for the QR Code Manager theme.</description>
 
-    <arg name="extensions" value="php"/>
-    <arg name="colors"/>
-    <arg value="n"/>
+	<file>.</file>
 
-    <rule ref="WordPress-Extra">
-        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
-        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
-    </rule>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/public/*</exclude-pattern>
+	<exclude-pattern>*/resources/views/*</exclude-pattern>
+	<exclude-pattern>*/storage/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg name="colors"/>
+	<arg value="sp"/>
+
+	<config name="minimum_wp_version" value="6.6"/>
+	<config name="testVersion" value="8.2-"/>
+
+	<rule ref="WordPress-Extra">
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+	<rule ref="WordPress-Docs"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="qr-code-manager"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Globals use the qr_code_manager prefix. Classes live in Sage's standard
+	     App\ namespace, which Acorn relies on to discover view composers. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="qr_code_manager"/>
+			</property>
+		</properties>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedNamespaceFound"/>
+	</rule>
+
+	<!-- Acorn view composers: method names become Blade variables. -->
+	<rule ref="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid">
+		<exclude-pattern>*/app/View/Composers/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase">
+		<exclude-pattern>*/app/View/Composers/*</exclude-pattern>
+	</rule>
 </ruleset>

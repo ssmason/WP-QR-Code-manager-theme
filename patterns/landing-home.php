@@ -6,7 +6,10 @@
  * Description: Marketing home page: hero, how it works, features, designs, FAQ and call to action. Use with the Landing page template.
  * Block Types: core/post-content
  * Inserter: true
+ *
+ * @package QrCodeManager
  */
+
 ?>
 <!-- wp:group {"align":"full","className":"landing-hero"} -->
 <div class="wp-block-group alignfull landing-hero"><!-- wp:columns {"verticalAlignment":"center","className":"landing-hero__inner"} -->
@@ -29,7 +32,7 @@
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#designs">See live examples</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#designs">See the designs</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
@@ -46,8 +49,8 @@
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"anchor":"how-it-works","align":"wide","className":"landing-section"} -->
-<div id="how-it-works" class="wp-block-group alignwide landing-section"><!-- wp:paragraph {"align":"center","className":"landing-eyebrow"} -->
+<!-- wp:group {"anchor":"how-it-works","align":"wide","className":"landing-section landing-section--sand"} -->
+<div id="how-it-works" class="wp-block-group alignwide landing-section landing-section--sand"><!-- wp:paragraph {"align":"center","className":"landing-eyebrow"} -->
 <p class="has-text-align-center landing-eyebrow">How it works</p>
 <!-- /wp:paragraph -->
 
@@ -58,7 +61,7 @@
 <!-- wp:columns {"className":"landing-steps"} -->
 <div class="wp-block-columns landing-steps"><!-- wp:column {"className":"landing-card"} -->
 <div class="wp-block-column landing-card"><!-- wp:paragraph {"className":"landing-step"} -->
-<p class="landing-step">1</p>
+<p class="landing-step">01</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -72,7 +75,7 @@
 
 <!-- wp:column {"className":"landing-card"} -->
 <div class="wp-block-column landing-card"><!-- wp:paragraph {"className":"landing-step"} -->
-<p class="landing-step">2</p>
+<p class="landing-step">02</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -86,7 +89,7 @@
 
 <!-- wp:column {"className":"landing-card"} -->
 <div class="wp-block-column landing-card"><!-- wp:paragraph {"className":"landing-step"} -->
-<p class="landing-step">3</p>
+<p class="landing-step">03</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -164,8 +167,8 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"anchor":"designs","align":"wide","className":"landing-section"} -->
-<div id="designs" class="wp-block-group alignwide landing-section"><!-- wp:paragraph {"align":"center","className":"landing-eyebrow"} -->
+<!-- wp:group {"anchor":"designs","align":"wide","className":"landing-section landing-section--sand"} -->
+<div id="designs" class="wp-block-group alignwide landing-section landing-section--sand"><!-- wp:paragraph {"align":"center","className":"landing-eyebrow"} -->
 <p class="has-text-align-center landing-eyebrow">Designs</p>
 <!-- /wp:paragraph -->
 
@@ -192,7 +195,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="#designs">View example →</a></p>
+<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/willow-rose-hair-studio/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -210,7 +213,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="#designs">View example →</a></p>
+<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/fade-republic/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -228,7 +231,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="#designs">View example →</a></p>
+<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/obsidian-cocktail-bar/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -246,7 +249,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="#designs">View example →</a></p>
+<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/petal-polish-nail-bar/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -264,18 +267,34 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="#designs">View example →</a></p>
+<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/daily-grind-coffee/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"anchor":"faq","className":"landing-section landing-faq"} -->
-<div id="faq" class="wp-block-group landing-section landing-faq"><!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Questions</h2>
+<!-- wp:group {"anchor":"faq","align":"wide","className":"landing-section landing-faq"} -->
+<div id="faq" class="wp-block-group alignwide landing-section landing-faq"><!-- wp:columns {"className":"landing-faq__layout"} -->
+<div class="wp-block-columns landing-faq__layout"><!-- wp:column {"width":"36%","className":"landing-faq__intro"} -->
+<div class="wp-block-column landing-faq__intro" style="flex-basis:36%"><!-- wp:paragraph {"className":"landing-eyebrow"} -->
+<p class="landing-eyebrow">FAQ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Questions</h2>
 <!-- /wp:heading -->
 
-<!-- wp:details -->
+<!-- wp:paragraph {"className":"landing-lead"} -->
+<p class="landing-lead">Everything you need to know before you start.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-faq__ask"} -->
+<p class="landing-faq__ask">Something else? <a href="https://satori-digital.com/" target="_blank" rel="noreferrer noopener">Ask us anything</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"landing-faq__list"} -->
+<div class="wp-block-column landing-faq__list"><!-- wp:details -->
 <details class="wp-block-details"><summary>Do I need a website?</summary><!-- wp:paragraph -->
 <p>No. Your price list page works perfectly on its own. If you do have a website, you can add links between the two.</p>
 <!-- /wp:paragraph --></details>
@@ -294,10 +313,18 @@
 <!-- /wp:details -->
 
 <!-- wp:details -->
+<details class="wp-block-details"><summary>Can you make a stand or sign for my QR code?</summary><!-- wp:paragraph -->
+<p>Yes. Our sister studio, <a href="https://3dprinting.satori-digital.com/" target="_blank" rel="noreferrer noopener">Satori 3D Printing</a>, makes custom counter stands, table signs and illuminated displays to hold your code.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
 <details class="wp-block-details"><summary>How do I get started?</summary><!-- wp:paragraph -->
 <p>Register your business. We review every application and email your login details once your page is ready.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"align":"full","className":"landing-cta"} -->

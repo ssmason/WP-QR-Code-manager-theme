@@ -66,10 +66,7 @@
         "post-autoload-dump": [
             "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
         ],
-        "test": "@php vendor/bin/phpunit",
-        "lint": "@php vendor/bin/pint --test",
-        "lint:fix": "@php vendor/bin/pint",
-        "phpcs": "@php vendor/bin/phpcs",
-        "phpcbf": "@php vendor/bin/phpcbf"
+        "lint": "@php vendor/bin/phpcs",
+        "lint:fix": "@php vendor/bin/phpcbf"
     }
 }
