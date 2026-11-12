@@ -10,10 +10,11 @@ namespace App\Providers;
 use App\Console\SyncPatternsCommand;
 use App\Landing\LandingAccess;
 use App\Landing\LandingEditorStyles;
+use App\Social\SocialLinks;
 use Roots\Acorn\Sage\SageServiceProvider;
 
 /**
- * Boots the theme: landing-page rules, editor styles and WP-CLI commands.
+ * Boots the theme: landing-page rules, editor styles, social links and WP-CLI commands.
  */
 class ThemeServiceProvider extends SageServiceProvider {
 
@@ -27,6 +28,7 @@ class ThemeServiceProvider extends SageServiceProvider {
 
 		LandingAccess::register();
 		LandingEditorStyles::register();
+		SocialLinks::register();
 
 		if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			\WP_CLI::add_command( 'qr-code-manager sync-patterns', SyncPatternsCommand::class );

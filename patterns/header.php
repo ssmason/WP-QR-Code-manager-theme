@@ -31,12 +31,14 @@
 
 <!-- wp:navigation-link {"label":"FAQ","url":"/#faq","kind":"custom"} /-->
 
-<!-- wp:navigation-link {"label":"Log in","url":"<?php echo esc_url( wp_login_url() ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Contact","url":"/contact/","kind":"custom"} /-->
+
+<!-- wp:navigation-link {"label":"Log in","url":"<?php echo esc_url( wp_make_link_relative( wp_login_url() ) ); ?>","kind":"custom"} /-->
 <!-- /wp:navigation -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/register/' ) ); ?>">Register</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/register/">Register</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

@@ -13,8 +13,8 @@ use WP_Block_Editor_Context;
 /**
  * Loads the landing styles into the block editor for Landing pages only.
  *
- * Other pages — including Satori Manifest client pages, which have their own
- * design styles — keep their own look in the editor.
+ * Other pages - including Satori Manifest client pages, which have their own
+ * design styles - keep their own look in the editor.
  */
 class LandingEditorStyles {
 

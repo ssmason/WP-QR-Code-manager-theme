@@ -1,0 +1,132 @@
+/*
+ * Qrable brand: the one place for colours, fonts and finish.
+ *
+ * Palette on trial: "Navy and mint, blue sections" (navy text, #0FFCBE mint buttons, #106EBE blue links and feature band).
+ *
+ * Change a value here and the whole public site follows (header, footer,
+ * Home, Register, Contact, the plugin's forms on those pages, Tailwind
+ * utilities and the block editor). Layout (widths, gutters, sections) lives
+ * in landing.css; nothing else in the theme hard-codes a brand colour.
+ *
+ * Not covered here (they cannot read CSS):
+ *   - resources/images/landing/hero.svg  (hero illustration colours)
+ *   - theme.json palette (block editor colour picker: keep in step by hand)
+ *   - Manifest → Settings → brand colours (login screen, client dashboard, emails)
+ *   - Client page designs (the plugin's designs/ folder)
+ */
+
+/* Fonts: loaded from Google Fonts. Change the families here and in the
+   font tokens below together. */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ── Core colours ─────────────────────────────────────────────────── */
+  --brand-ink: #031a57;           /* main text, footer background, dark buttons */
+  --brand-ink-soft: #0a3399;      /* softer dark, hero glow */
+  --brand-muted: #43506e;         /* secondary text */
+  --brand-steel: #a7b6dc;         /* light text and lines on dark backgrounds */
+  --brand-on-dark: #fff;          /* text on dark backgrounds */
+
+  /* ── Accent ───────────────────────────────────────────────────────── */
+  --brand-accent: #0ffcbe;        /* buttons, highlights */
+  --brand-accent-hover: #5ffdd3;  /* button hover */
+  --brand-accent-text: #031a57;   /* text on accent buttons */
+  --brand-accent-strong: #106ebe; /* links, small labels (readable on light backgrounds) */
+
+  /* ── Backgrounds and lines ────────────────────────────────────────── */
+  --brand-bg: #f3f8fc;            /* page background */
+  --brand-surface: #fff;          /* cards and forms */
+  --brand-tint: #d9e8f6;          /* alternate section background */
+  --brand-header: #106ebe;        /* header (nav bar) background */
+  --brand-header-text: #fff;      /* header text and links */
+  --brand-header-logo: brightness(0) invert(1); /* logo on the header: white; use none for the original */
+  --brand-sand-light: #e2f0fb;    /* light alternate sections */
+  --brand-border: #c9daea;        /* borders and dividers */
+  --brand-band: #106ebe;          /* solid blue band ("Everything you need"), white text */
+  --brand-hero-pattern: #106ebe;  /* faint QR texture behind the Home hero */
+  --brand-hero-pattern-strength: 0.07; /* 0 = off, 0.15 = strong */
+
+  /* ── Type ─────────────────────────────────────────────────────────── */
+  --brand-font-heading: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --brand-font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --brand-font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", menlo, monospace;
+
+  /* ── Finish ───────────────────────────────────────────────────────── */
+  --brand-radius: 16px;
+  --brand-shadow:
+    0 1px 2px color-mix(in srgb, var(--brand-ink) 4%, transparent),
+    0 18px 40px -24px color-mix(in srgb, var(--brand-ink) 35%, transparent);
+  --brand-button-shadow: 0 12px 24px -14px color-mix(in srgb, var(--brand-accent) 90%, transparent);
+}
+
+/* Previous palette ("Navy and electric blue", #01257D / #00FFFF), to switch back:
+   --brand-ink: #031a57;
+   --brand-ink-soft: #0a3399;
+   --brand-muted: #4a5677;
+   --brand-steel: #a7b6dc;
+   --brand-on-dark: #fff;
+   --brand-accent: #00ffff;
+   --brand-accent-hover: #66ffff;
+   --brand-accent-text: #031a57;
+   --brand-accent-strong: #01257d;
+   --brand-bg: #f6f9fd;
+   --brand-surface: #fff;
+   --brand-tint: #e8eefa;
+   --brand-header: #e6fbff;
+   --brand-sand-light: #e9fdfe;
+   --brand-border: #d6def0;
+*/
+
+/* Previous palette ("Navy and mint": navy text, #0FFCBE mint buttons, #106EBE links), to switch back:
+   --brand-ink: #031a57;
+   --brand-ink-soft: #0a3399;
+   --brand-muted: #4a5677;
+   --brand-steel: #a7b6dc;
+   --brand-on-dark: #fff;
+   --brand-accent: #0ffcbe;
+   --brand-accent-hover: #5ffdd3;
+   --brand-accent-text: #031a57;
+   --brand-accent-strong: #106ebe;
+   --brand-bg: #f7fafc;
+   --brand-surface: #fff;
+   --brand-tint: #eaf2f8;
+   --brand-header: #e3f6f9;
+   --brand-sand-light: #ecfbf6;
+   --brand-border: #d9e4ec;
+*/
+
+/* Previous palette ("Dark royal blue and gold", #002349 / #957C3D), to switch back:
+   --brand-ink: #002349;
+   --brand-ink-soft: #0b3366;
+   --brand-muted: #4f5868;
+   --brand-steel: #b5bfcf;
+   --brand-on-dark: #fff;
+   --brand-accent: #957c3d;
+   --brand-accent-hover: #a88d4a;
+   --brand-accent-text: #fff;
+   --brand-accent-strong: #7a6430;
+   --brand-bg: #fbfaf6;
+   --brand-surface: #fff;
+   --brand-tint: #f3efe4;
+   --brand-header: #f6f1e4;
+   --brand-sand-light: #faf6ec;
+   --brand-border: #e5dfcf;
+*/
+
+/* Previous palette ("Blue and mint", #106EBE / #0FFCBE), to switch back:
+   --brand-ink: #0b2540;
+   --brand-ink-soft: #133a5c;
+   --brand-muted: #4d6070;
+   --brand-steel: #a9c3d6;
+   --brand-on-dark: #fff;
+   --brand-accent: #0ffcbe;
+   --brand-accent-hover: #5ffdd3;
+   --brand-accent-text: #0b2540;
+   --brand-accent-strong: #106ebe;
+   --brand-bg: #f7fafc;
+   --brand-surface: #fff;
+   --brand-tint: #eaf2f8;
+   --brand-header: #e3f6f9;
+   --brand-sand-light: #ecfbf6;
+   --brand-border: #d9e4ec;
+*/

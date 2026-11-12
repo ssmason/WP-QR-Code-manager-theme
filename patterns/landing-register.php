@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Landing — Register
+ * Title: Landing - Register
  * Slug: qr-code-manager/landing-register
  * Categories: featured
  * Description: Registration page intro with the Satori Manifest registration form block. Use with the Landing page template.
@@ -20,12 +20,12 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">Tell us a little about your business. We review every application personally and email your login details as soon as your page is ready — usually within one working day.</p>
+<p class="landing-lead">Tell us a little about your business, choose your plan and pay securely with Stripe. Your account is set up straight away and we email you a link to choose your password.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:satori-manifest/registration-form /-->
 
 <!-- wp:paragraph {"className":"landing-small-print"} -->
-<p class="landing-small-print">Already registered? <a href="<?php echo esc_url( wp_login_url() ); ?>">Log in to your account</a>.</p>
+<p class="landing-small-print">Already registered? <a href="<?php echo esc_url( wp_make_link_relative( wp_login_url() ) ); ?>">Log in to your account</a>.</p>
 <!-- /wp:paragraph -->

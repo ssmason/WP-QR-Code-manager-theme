@@ -9,20 +9,24 @@
  * @package QrCodeManager
  */
 
-$qr_code_manager_logo = \Illuminate\Support\Facades\Vite::asset( 'resources/images/brand/satori-logo-white.png' );
+$qr_code_manager_logo = wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/brand/satori-logo-white.png' ) );
 ?>
 <!-- wp:group {"className":"site-footer","layout":{"type":"default"}} -->
 <div class="wp-block-group site-footer"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"34%"} -->
 <div class="wp-block-column" style="flex-basis:34%"><!-- wp:image {"sizeSlug":"full","linkDestination":"custom","className":"site-footer__logo"} -->
-<figure class="wp-block-image size-full site-footer__logo"><a href="https://satori-digital.com/" target="_blank" rel="noreferrer noopener"><img src="<?php echo esc_url( $qr_code_manager_logo ); ?>" alt="Satori Digital"/></a></figure>
+<figure class="wp-block-image size-full site-footer__logo"><a href="https://satori-digital.com/" target="_blank" rel="noreferrer noopener"><img src="<?php echo esc_url( $qr_code_manager_logo ); ?>" alt="Satori Digital" width="117" height="120"/></a></figure>
 <!-- /wp:image -->
 
 <!-- wp:site-title {"level":0} /-->
 
 <!-- wp:paragraph {"className":"site-footer__muted"} -->
-<p class="site-footer__muted">QR code price lists and menus that stay up to date — designed, hosted and supported by Satori Digital.</p>
-<!-- /wp:paragraph --></div>
+<p class="site-footer__muted">QR code price lists and menus that stay up to date. Designed, hosted and supported by Satori Digital.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[social_links]
+<!-- /wp:shortcode --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
@@ -31,11 +35,11 @@ $qr_code_manager_logo = \Illuminate\Support\Facades\Vite::asset( 'resources/imag
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><a href="<?php echo esc_url( home_url( '/register/' ) ); ?>">Register your business</a></p>
+<p><a href="/register/">Register your business</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><a href="<?php echo esc_url( wp_login_url() ); ?>">Client log in</a></p>
+<p><a href="<?php echo esc_url( wp_make_link_relative( wp_login_url() ) ); ?>">Client log in</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -44,6 +48,14 @@ $qr_code_manager_logo = \Illuminate\Support\Facades\Vite::asset( 'resources/imag
 
 <!-- wp:paragraph -->
 <p><a href="/#faq">Questions</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/contact/">Contact us</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="mailto:hello@qrable.net">hello@qrable.net</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -81,6 +93,6 @@ $qr_code_manager_logo = \Illuminate\Support\Facades\Vite::asset( 'resources/imag
 <!-- /wp:columns -->
 
 <!-- wp:paragraph {"className":"site-footer__bottom"} -->
-<p class="site-footer__bottom">© <?php echo esc_html( gmdate( 'Y' ) ); ?> QR Code Manager · A <a href="https://satori-digital.com/" target="_blank" rel="noreferrer noopener">Satori Digital</a> product</p>
+<p class="site-footer__bottom">© <?php echo esc_html( gmdate( 'Y' ) ); ?> Qrable · A <a href="https://satori-digital.com/" target="_blank" rel="noreferrer noopener">Satori Digital</a> product</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->

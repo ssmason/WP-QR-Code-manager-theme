@@ -2,26 +2,26 @@
  * Theme stylesheet entry point.
  *
  * Tailwind v4 (utilities for Blade templates) plus the landing styles for the
- * marketing site. Font imports must come first.
+ * marketing site. brand.css (colours, fonts) comes first: it holds the font import.
  */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "./brand.css";
 @import "tailwindcss" important theme(static);
 @import "./landing.css";
 
-/* Satori Digital palette and type, available as Tailwind utilities
-   (bg-ink, text-amber, font-serif, …) and in theme.json. */
+/* Brand colours and fonts (brand.css) as Tailwind utilities
+   (bg-ink, text-amber, font-serif, …). */
 @theme {
-  --color-ink: #0b1620;
-  --color-ink-soft: #132632;
-  --color-steel: #afc2cc;
-  --color-amber: #f2a65a;
-  --color-amber-dark: #8a4f0f;
-  --color-paper: #faf8f4;
-  --color-sand: #f2eee6;
+  --color-ink: var(--brand-ink);
+  --color-ink-soft: var(--brand-ink-soft);
+  --color-steel: var(--brand-steel);
+  --color-amber: var(--brand-accent);
+  --color-amber-dark: var(--brand-accent-strong);
+  --color-paper: var(--brand-bg);
+  --color-sand: var(--brand-tint);
 
-  --font-serif: "Fraunces", georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: var(--brand-font-heading);
+  --font-sans: var(--brand-font-body);
+  --font-mono: var(--brand-font-mono);
 }
 
 @source "../../app/**/*.php";

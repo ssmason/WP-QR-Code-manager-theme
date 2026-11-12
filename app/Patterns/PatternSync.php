@@ -14,7 +14,7 @@ use WP_Block_Patterns_Registry;
  *
  * Patterns in patterns/ are the source of truth for the marketing site. This
  * writes their current markup to the synced "Header" and "Footer" patterns
- * and to the Home and Register pages (creating any that are missing), so a
+ * and to the Home, Register and Contact pages (creating any that are missing), so a
  * design change in code reaches the live site with one command:
  *
  *   wp qr-code-manager sync-patterns
@@ -39,6 +39,7 @@ class PatternSync {
 	public const PAGES = array(
 		'home'     => array( 'Home', 'qr-code-manager/landing-home' ),
 		'register' => array( 'Register', 'qr-code-manager/landing-register' ),
+		'contact'  => array( 'Contact', 'qr-code-manager/landing-contact' ),
 	);
 
 	/**

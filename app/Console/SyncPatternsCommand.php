@@ -14,7 +14,7 @@ use WP_CLI;
  * WP-CLI: wp qr-code-manager sync-patterns
  *
  * Writes the theme's patterns (patterns/*.php) to the synced Header/Footer
- * patterns and the Home/Register pages. Run after changing a pattern file
+ * patterns and the Home/Register/Contact pages. Run after changing a pattern file
  * or rebuilding assets (image URLs in the patterns are versioned).
  */
 class SyncPatternsCommand {

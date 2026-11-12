@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Landing — Home
+ * Title: Landing - Home
  * Slug: qr-code-manager/landing-home
  * Categories: featured
  * Description: Marketing home page: hero, how it works, features, designs, FAQ and call to action. Use with the Landing page template.
@@ -23,16 +23,16 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">We print a QR code for your counter, tables or window. Customers scan it and see your prices on a beautiful page that looks like your brand — and you can update it any time, in seconds.</p>
+<p class="landing-lead">Prices change. Your printed menu shouldn't have to. We make you a durable QR sign; customers scan it and see your prices on a page that looks like your brand. Change a price from your phone and it's live in seconds, with no reprinting ever.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/register/' ) ); ?>">Register your business</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/register/">Register your business</a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#designs">See the designs</a></div>
+<!-- wp:button {"className":"is-style-outline","linkTarget":"_blank","rel":"noreferrer noopener"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/harbour-kitchen/" target="_blank" rel="noreferrer noopener">See an example</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
@@ -43,7 +43,7 @@
 
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-hero__art"} -->
-<figure class="wp-block-image size-full landing-hero__art"><img src="<?php echo esc_url( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/hero.svg' ) ); ?>" alt="A QR code on a table card opening a price list on a phone"/></figure>
+<figure class="wp-block-image size-full landing-hero__art"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/hero.svg' ) ) ); ?>" alt="Printed QR code signs opening a price list on a phone" width="520" height="520" fetchpriority="high"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -69,7 +69,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Table cards, stickers or window signs — your code is printed and sent to you, ready to put out.</p>
+<p>Table cards, stickers or window signs: your code is printed and sent to you, ready to put out.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -152,7 +152,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Lightweight pages that open instantly — no app, no sign-up for your customers.</p>
+<p>Lightweight pages that open instantly. No app and no sign-up for your customers.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -177,7 +177,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"landing-lead"} -->
-<p class="has-text-align-center landing-lead">Every design is a starting point — change colours, fonts and layout to suit you, and switch whenever you like.</p>
+<p class="has-text-align-center landing-lead">Every design is a starting point. Change colours, fonts and layout to suit you, and switch whenever you like. Add ready-made layouts for photos and full menu pages.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"className":"landing-design-cards"} -->
@@ -195,7 +195,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/willow-rose-hair-studio/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<p class="landing-card__link"><a href="/willow-rose-hair-studio/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -213,7 +213,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/fade-republic/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<p class="landing-card__link"><a href="/fade-republic/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -231,7 +231,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/obsidian-cocktail-bar/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<p class="landing-card__link"><a href="/obsidian-cocktail-bar/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -249,7 +249,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/petal-polish-nail-bar/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<p class="landing-card__link"><a href="/petal-polish-nail-bar/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -263,14 +263,32 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Minimal and typographic — perfect on its own.</p>
+<p>Minimal and typographic, perfect on its own.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="<?php echo esc_url( home_url( '/daily-grind-coffee/' ) ); ?>" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<p class="landing-card__link"><a href="/daily-grind-coffee/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
-<!-- /wp:columns --></div>
+<!-- /wp:columns -->
+
+<!-- wp:group {"className":"landing-card landing-card--layouts"} -->
+<div class="wp-block-group landing-card landing-card--layouts"><!-- wp:paragraph {"className":"landing-card__tag"} -->
+<p class="landing-card__tag">Restaurants &amp; cafés</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Plus six ready-made layouts</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Build a full menu page in a few clicks: a photo hero, menu sections, a menu in two columns, a photo strip, a closing banner, or the whole page at once. Add your photos, choose which sections each list shows, done. They work with every design and look right on phones.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-card__link"} -->
+<p class="landing-card__link"><a href="/harbour-kitchen/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"anchor":"faq","align":"wide","className":"landing-section landing-faq"} -->
@@ -302,7 +320,7 @@
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>What happens when my prices change?</summary><!-- wp:paragraph -->
-<p>Log in, edit your prices and save. Your printed QR code always opens the latest version — nothing to reprint.</p>
+<p>Log in, edit your prices and save. Your printed QR code always opens the latest version, so there is nothing to reprint.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
@@ -320,7 +338,7 @@
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>How do I get started?</summary><!-- wp:paragraph -->
-<p>Register your business. We review every application and email your login details once your page is ready.</p>
+<p>Choose your plan and pay securely. Your account is ready straight away and we email you your login link.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></div>
 <!-- /wp:column --></div>
@@ -338,7 +356,7 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/register/' ) ); ?>">Register your business</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/register/">Register your business</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

@@ -33,9 +33,10 @@ class SiteChrome extends Composer {
 	 * @return array<string, string>
 	 */
 	public function with(): array {
+		// Synced patterns skip the_content, so shortcodes ([social_links]) run here.
 		return array(
-			'headerContent' => SyncedPattern::render( 'Header' ),
-			'footerContent' => SyncedPattern::render( 'Footer' ),
+			'headerContent' => do_shortcode( SyncedPattern::render( 'Header' ) ),
+			'footerContent' => do_shortcode( SyncedPattern::render( 'Footer' ) ),
 		);
 	}
 }

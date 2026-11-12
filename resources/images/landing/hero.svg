@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="sm-hero-title">
-	<title id="sm-hero-title">A QR code on a table card opening a price list on a phone</title>
+	<title id="sm-hero-title">Printed QR code signs opening a price list on a phone</title>
 	<defs>
 		<linearGradient id="sm-bg" x1="0" y1="0" x2="1" y2="1">
-			<stop offset="0" stop-color="#fbe3c8"/>
-			<stop offset="1" stop-color="#efe9e0"/>
+			<stop offset="0" stop-color="#dcecf9"/>
+			<stop offset="1" stop-color="#e3f7f1"/>
 		</linearGradient>
 		<filter id="sm-shadow" x="-20%" y="-20%" width="140%" height="140%">
 			<feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0b1620" flood-opacity=".22"/>
@@ -11,68 +11,71 @@
 	</defs>
 	<circle cx="270" cy="250" r="230" fill="url(#sm-bg)"/>
 
-	<!-- Table card with QR code -->
-	<g filter="url(#sm-shadow)" transform="rotate(-8 140 330)">
-		<rect x="40" y="220" width="190" height="230" rx="18" fill="#fff"/>
-		<text x="135" y="262" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#0b1620">Scan for prices</text>
-		<g transform="translate(75 280)" fill="#0b1620">
-			<rect width="120" height="120" rx="8" fill="#fff" stroke="#0b1620" stroke-width="4"/>
-			<rect x="12" y="12" width="32" height="32" rx="4"/>
-			<rect x="76" y="12" width="32" height="32" rx="4"/>
-			<rect x="12" y="76" width="32" height="32" rx="4"/>
-			<rect x="19" y="19" width="18" height="18" rx="2" fill="#fff"/>
-			<rect x="83" y="19" width="18" height="18" rx="2" fill="#fff"/>
-			<rect x="19" y="83" width="18" height="18" rx="2" fill="#fff"/>
-			<rect x="54" y="14" width="10" height="10"/>
-			<rect x="54" y="34" width="10" height="10"/>
-			<rect x="54" y="56" width="10" height="10"/>
-			<rect x="14" y="56" width="10" height="10"/>
-			<rect x="34" y="56" width="10" height="10"/>
-			<rect x="76" y="56" width="10" height="10"/>
-			<rect x="98" y="56" width="10" height="10"/>
-			<rect x="56" y="78" width="10" height="10"/>
-			<rect x="78" y="78" width="10" height="10"/>
-			<rect x="98" y="88" width="10" height="10"/>
-			<rect x="66" y="98" width="10" height="10"/>
-			<rect x="86" y="100" width="10" height="10"/>
-		</g>
-		<text x="135" y="428" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#6b7781">TABLE 4</text>
+	<!-- Printed QR code signs (drawn; the codes are real and open qrable.net) -->
+	<g filter="url(#sm-shadow)" transform="rotate(-6 115 320)">
+		<rect x="20" y="196" width="190" height="232" rx="20" fill="#14171c"/>
+		<rect x="25" y="201" width="180" height="222" rx="16" fill="#fbfbfa"/>
+		<path d="M25 236 V217 a16 16 0 0 1 16 -16 H66 Q38 206 25 236 Z" fill="#106ebe"/>
+		<text x="117" y="228" text-anchor="middle" font-family="Plus Jakarta Sans, Helvetica, Arial, sans-serif" font-weight="800" font-size="17" fill="#14171c" letter-spacing="-0.3">Custom QR Code</text>
+		<text x="117" y="242" text-anchor="middle" font-family="Plus Jakarta Sans, Helvetica, Arial, sans-serif" font-weight="800" font-size="7.4" fill="#106ebe">Your Link · Your Text · Your Design</text>
+		<g transform="translate(55 252) scale(4.8800)"><path fill="#111" d="M0 0h7v1h-7zM9 0h2v1h-2zM15 0h1v1h-1zM18 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM13 1h4v1h-4zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM9 2h4v1h-4zM14 2h1v1h-1zM18 2h1v1h-1zM20 2h3v1h-3zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM9 3h4v1h-4zM15 3h1v1h-1zM18 3h1v1h-1zM20 3h3v1h-3zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h2v1h-2zM12 4h4v1h-4zM18 4h1v1h-1zM20 4h3v1h-3zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM12 5h1v1h-1zM14 5h2v1h-2zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h7v1h-7zM9 7h1v1h-1zM13 7h2v1h-2zM16 7h1v1h-1zM0 8h1v1h-1zM2 8h1v1h-1zM4 8h1v1h-1zM6 8h1v1h-1zM9 8h3v1h-3zM14 8h3v1h-3zM20 8h1v1h-1zM23 8h1v1h-1zM0 9h2v1h-2zM3 9h2v1h-2zM7 9h1v1h-1zM11 9h1v1h-1zM16 9h1v1h-1zM18 9h1v1h-1zM24 9h1v1h-1zM1 10h11v1h-11zM13 10h1v1h-1zM16 10h1v1h-1zM18 10h3v1h-3zM22 10h3v1h-3zM0 11h3v1h-3zM5 11h1v1h-1zM7 11h3v1h-3zM12 11h1v1h-1zM16 11h4v1h-4zM23 11h1v1h-1zM0 12h7v1h-7zM10 12h1v1h-1zM12 12h1v1h-1zM15 12h5v1h-5zM21 12h1v1h-1zM23 12h2v1h-2zM3 13h3v1h-3zM7 13h7v1h-7zM17 13h2v1h-2zM21 13h1v1h-1zM24 13h1v1h-1zM0 14h1v1h-1zM3 14h1v1h-1zM5 14h3v1h-3zM9 14h1v1h-1zM11 14h2v1h-2zM14 14h1v1h-1zM18 14h2v1h-2zM22 14h3v1h-3zM1 15h2v1h-2zM4 15h2v1h-2zM7 15h1v1h-1zM9 15h1v1h-1zM12 15h5v1h-5zM20 15h1v1h-1zM23 15h1v1h-1zM0 16h1v1h-1zM4 16h8v1h-8zM14 16h1v1h-1zM16 16h6v1h-6zM8 17h1v1h-1zM11 17h1v1h-1zM14 17h3v1h-3zM20 17h2v1h-2zM23 17h2v1h-2zM0 18h7v1h-7zM10 18h1v1h-1zM13 18h1v1h-1zM15 18h2v1h-2zM18 18h1v1h-1zM20 18h2v1h-2zM23 18h2v1h-2zM0 19h1v1h-1zM6 19h1v1h-1zM10 19h2v1h-2zM16 19h1v1h-1zM20 19h2v1h-2zM24 19h1v1h-1zM0 20h1v1h-1zM2 20h3v1h-3zM6 20h1v1h-1zM8 20h3v1h-3zM12 20h1v1h-1zM16 20h6v1h-6zM24 20h1v1h-1zM0 21h1v1h-1zM2 21h3v1h-3zM6 21h1v1h-1zM9 21h1v1h-1zM11 21h3v1h-3zM15 21h1v1h-1zM19 21h4v1h-4zM0 22h1v1h-1zM2 22h3v1h-3zM6 22h1v1h-1zM8 22h1v1h-1zM11 22h2v1h-2zM14 22h2v1h-2zM20 22h1v1h-1zM24 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM12 23h6v1h-6zM20 23h2v1h-2zM23 23h1v1h-1zM0 24h7v1h-7zM8 24h1v1h-1zM10 24h2v1h-2zM14 24h3v1h-3zM19 24h1v1h-1zM23 24h2v1h-2z"/></g>
+		<rect x="40" y="386" width="152" height="28" rx="14" fill="#106ebe"/>
+		<g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M56 396 a5 5 0 0 1 0 8"/><path d="M60 392 a10 10 0 0 1 0 16"/><path d="M64 388 a15 15 0 0 1 0 24"/></g>
+		<text x="124" y="405" text-anchor="middle" font-family="Plus Jakarta Sans, Helvetica, Arial, sans-serif" font-weight="800" font-size="13" fill="#fff" letter-spacing="0.5">TAP or SCAN</text>
+	</g>
+	<g filter="url(#sm-shadow)" transform="rotate(5 190 375)">
+		<rect x="130" y="298" width="122" height="152" rx="16" fill="#14171c"/>
+		<rect x="134" y="302" width="114" height="144" rx="12" fill="#fbfbfa"/>
+		<path d="M134 330 V314 a12 12 0 0 1 12 -12 H160 Q141 308 134 330 Z" fill="#c8102e"/>
+		<path d="M248 418 V434 a12 12 0 0 1 -12 12 H222 Q241 440 248 418 Z" fill="#c8102e"/>
+		<text x="191" y="322" text-anchor="middle" font-family="Plus Jakarta Sans, Helvetica, Arial, sans-serif" font-weight="800" font-size="14" fill="#14171c">Our <tspan fill="#c8102e">Menu</tspan></text>
+		<g transform="translate(154 328) scale(2.5517)"><path fill="#111" d="M0 0h7v1h-7zM9 0h1v1h-1zM11 0h1v1h-1zM14 0h1v1h-1zM18 0h2v1h-2zM22 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM12 1h2v1h-2zM19 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM9 2h3v1h-3zM15 2h1v1h-1zM18 2h3v1h-3zM22 2h1v1h-1zM24 2h3v1h-3zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM9 3h3v1h-3zM13 3h1v1h-1zM18 3h3v1h-3zM22 3h1v1h-1zM24 3h3v1h-3zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h3v1h-3zM13 4h1v1h-1zM16 4h4v1h-4zM22 4h1v1h-1zM24 4h3v1h-3zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM10 5h3v1h-3zM14 5h3v1h-3zM18 5h3v1h-3zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h7v1h-7zM10 7h1v1h-1zM16 7h4v1h-4zM0 8h1v1h-1zM2 8h1v1h-1zM4 8h1v1h-1zM6 8h1v1h-1zM9 8h1v1h-1zM11 8h2v1h-2zM15 8h3v1h-3zM20 8h1v1h-1zM24 8h1v1h-1zM27 8h1v1h-1zM2 9h1v1h-1zM5 9h1v1h-1zM8 9h2v1h-2zM13 9h1v1h-1zM17 9h2v1h-2zM20 9h3v1h-3zM25 9h1v1h-1zM28 9h1v1h-1zM3 10h1v1h-1zM5 10h7v1h-7zM14 10h1v1h-1zM16 10h1v1h-1zM20 10h2v1h-2zM26 10h3v1h-3zM0 11h1v1h-1zM2 11h4v1h-4zM7 11h4v1h-4zM13 11h2v1h-2zM16 11h4v1h-4zM21 11h1v1h-1zM23 11h1v1h-1zM27 11h1v1h-1zM0 12h2v1h-2zM4 12h1v1h-1zM6 12h1v1h-1zM14 12h4v1h-4zM19 12h4v1h-4zM25 12h1v1h-1zM27 12h2v1h-2zM0 13h1v1h-1zM2 13h1v1h-1zM4 13h2v1h-2zM7 13h1v1h-1zM10 13h3v1h-3zM14 13h1v1h-1zM16 13h3v1h-3zM20 13h3v1h-3zM25 13h1v1h-1zM28 13h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM9 14h1v1h-1zM13 14h1v1h-1zM17 14h2v1h-2zM21 14h5v1h-5zM27 14h2v1h-2zM0 15h4v1h-4zM5 15h1v1h-1zM9 15h1v1h-1zM15 15h3v1h-3zM20 15h1v1h-1zM23 15h1v1h-1zM25 15h1v1h-1zM27 15h1v1h-1zM4 16h4v1h-4zM9 16h2v1h-2zM12 16h1v1h-1zM16 16h5v1h-5zM22 16h1v1h-1zM25 16h1v1h-1zM27 16h2v1h-2zM1 17h2v1h-2zM4 17h1v1h-1zM10 17h1v1h-1zM12 17h2v1h-2zM16 17h1v1h-1zM21 17h2v1h-2zM25 17h2v1h-2zM28 17h1v1h-1zM0 18h1v1h-1zM3 18h2v1h-2zM6 18h1v1h-1zM14 18h1v1h-1zM16 18h1v1h-1zM20 18h2v1h-2zM27 18h2v1h-2zM1 19h1v1h-1zM3 19h1v1h-1zM5 19h1v1h-1zM8 19h8v1h-8zM17 19h7v1h-7zM25 19h1v1h-1zM27 19h1v1h-1zM0 20h1v1h-1zM2 20h3v1h-3zM6 20h3v1h-3zM11 20h2v1h-2zM14 20h4v1h-4zM20 20h5v1h-5zM8 21h2v1h-2zM11 21h1v1h-1zM14 21h1v1h-1zM16 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM26 21h3v1h-3zM0 22h7v1h-7zM11 22h1v1h-1zM13 22h1v1h-1zM17 22h4v1h-4zM22 22h1v1h-1zM24 22h2v1h-2zM27 22h2v1h-2zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h2v1h-2zM17 23h2v1h-2zM20 23h1v1h-1zM24 23h2v1h-2zM28 23h1v1h-1zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM8 24h1v1h-1zM11 24h2v1h-2zM16 24h2v1h-2zM20 24h5v1h-5zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h3v1h-3zM6 25h1v1h-1zM9 25h1v1h-1zM16 25h1v1h-1zM24 25h1v1h-1zM26 25h3v1h-3zM0 26h1v1h-1zM2 26h3v1h-3zM6 26h1v1h-1zM8 26h1v1h-1zM12 26h1v1h-1zM14 26h1v1h-1zM16 26h1v1h-1zM18 26h3v1h-3zM23 26h3v1h-3zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM11 27h1v1h-1zM15 27h6v1h-6zM22 27h1v1h-1zM27 27h1v1h-1zM0 28h7v1h-7zM8 28h1v1h-1zM10 28h2v1h-2zM17 28h1v1h-1zM19 28h2v1h-2zM24 28h2v1h-2zM27 28h2v1h-2z"/></g>
+		<rect x="142" y="410" width="98" height="22" rx="11" fill="#c8102e"/>
+		<g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M148 418.5 a3 3 0 0 1 0 5"/><path d="M151 416 a6 6 0 0 1 0 10"/><path d="M154 413.5 a9 9 0 0 1 0 15"/></g>
+		<text x="199" y="424.5" text-anchor="middle" font-family="Plus Jakarta Sans, Helvetica, Arial, sans-serif" font-weight="800" font-size="9" fill="#fff" letter-spacing="0.4">TAP or SCAN</text>
 	</g>
 
 	<!-- Phone -->
 	<g filter="url(#sm-shadow)">
-		<rect x="262" y="60" width="206" height="400" rx="34" fill="#0b1620"/>
-		<rect x="274" y="72" width="182" height="376" rx="24" fill="#faf6f1"/>
-		<rect x="335" y="80" width="60" height="8" rx="4" fill="#0b1620"/>
-		<text x="365" y="126" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#2e2621">Willow &amp; Rose</text>
-		<text x="365" y="144" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" letter-spacing="2" fill="#8c7e72">HAIR · COLOUR · CARE</text>
-		<line x1="292" y1="172" x2="330" y2="172" stroke="#d9cfc4"/>
-		<line x1="400" y1="172" x2="438" y2="172" stroke="#d9cfc4"/>
-		<text x="365" y="176" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="14" fill="#a0704c">Cutting</text>
-		<g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2e2621">
-			<text x="292" y="206">Restyle</text><text x="438" y="206" text-anchor="end" fill="#a0704c">68 €</text>
-			<line x1="334" y1="203" x2="414" y2="203" stroke="#cbbfb3" stroke-dasharray="1.5 3"/>
-			<text x="292" y="232">Cut &amp; finish</text><text x="438" y="232" text-anchor="end" fill="#a0704c">58 €</text>
-			<line x1="358" y1="229" x2="414" y2="229" stroke="#cbbfb3" stroke-dasharray="1.5 3"/>
-			<text x="292" y="258">Blow dry</text><text x="438" y="258" text-anchor="end" fill="#a0704c">32 €</text>
-			<line x1="342" y1="255" x2="414" y2="255" stroke="#cbbfb3" stroke-dasharray="1.5 3"/>
+		<rect x="262" y="60" width="206" height="400" rx="34" fill="#031a57"/>
+		<rect x="274" y="72" width="182" height="376" rx="24" fill="#f4f9fd"/>
+		<rect x="335" y="80" width="60" height="8" rx="4" fill="#031a57"/>
+		<text x="365" y="126" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#031a57">Willow &amp; Rose</text>
+		<text x="365" y="144" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" letter-spacing="2" fill="#4d6070">HAIR · COLOUR · CARE</text>
+		<line x1="292" y1="172" x2="330" y2="172" stroke="#c9daea"/>
+		<line x1="400" y1="172" x2="438" y2="172" stroke="#c9daea"/>
+		<text x="365" y="176" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="14" fill="#106ebe">Cutting</text>
+		<g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#031a57">
+			<text x="292" y="206">Restyle</text><text x="438" y="206" text-anchor="end" fill="#106ebe">68 €</text>
+			<line x1="334" y1="203" x2="414" y2="203" stroke="#b7c9da" stroke-dasharray="1.5 3"/>
+			<text x="292" y="232">Cut &amp; finish</text><text x="438" y="232" text-anchor="end" fill="#106ebe">58 €</text>
+			<line x1="358" y1="229" x2="414" y2="229" stroke="#b7c9da" stroke-dasharray="1.5 3"/>
+			<text x="292" y="258">Blow dry</text><text x="438" y="258" text-anchor="end" fill="#106ebe">32 €</text>
+			<line x1="342" y1="255" x2="414" y2="255" stroke="#b7c9da" stroke-dasharray="1.5 3"/>
 		</g>
-		<line x1="292" y1="292" x2="333" y2="292" stroke="#d9cfc4"/>
-		<line x1="397" y1="292" x2="438" y2="292" stroke="#d9cfc4"/>
-		<text x="365" y="296" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="14" fill="#a0704c">Colour</text>
-		<g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2e2621">
-			<text x="292" y="326">Balayage</text><text x="438" y="326" text-anchor="end" fill="#a0704c">145 €</text>
-			<line x1="344" y1="323" x2="410" y2="323" stroke="#cbbfb3" stroke-dasharray="1.5 3"/>
-			<text x="292" y="352">Root tint</text><text x="438" y="352" text-anchor="end" fill="#a0704c">55 €</text>
-			<line x1="342" y1="349" x2="414" y2="349" stroke="#cbbfb3" stroke-dasharray="1.5 3"/>
-			<text x="292" y="378">Toner</text><text x="438" y="378" text-anchor="end" fill="#a0704c">25 €</text>
-			<line x1="326" y1="375" x2="414" y2="375" stroke="#cbbfb3" stroke-dasharray="1.5 3"/>
+		<line x1="292" y1="292" x2="333" y2="292" stroke="#c9daea"/>
+		<line x1="397" y1="292" x2="438" y2="292" stroke="#c9daea"/>
+		<text x="365" y="296" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="14" fill="#106ebe">Colour</text>
+		<g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#031a57">
+			<text x="292" y="326">Balayage</text><text x="438" y="326" text-anchor="end" fill="#106ebe">145 €</text>
+			<line x1="344" y1="323" x2="410" y2="323" stroke="#b7c9da" stroke-dasharray="1.5 3"/>
+			<text x="292" y="352">Root tint</text><text x="438" y="352" text-anchor="end" fill="#106ebe">55 €</text>
+			<line x1="342" y1="349" x2="414" y2="349" stroke="#b7c9da" stroke-dasharray="1.5 3"/>
+			<text x="292" y="378">Toner</text><text x="438" y="378" text-anchor="end" fill="#106ebe">25 €</text>
+			<line x1="326" y1="375" x2="414" y2="375" stroke="#b7c9da" stroke-dasharray="1.5 3"/>
 		</g>
-		<rect x="300" y="404" width="130" height="28" rx="14" fill="#f2a65a"/>
-		<text x="365" y="422" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#0b1620">BOOK NOW</text>
+		<rect x="300" y="404" width="130" height="28" rx="14" fill="#106ebe"/>
+		<text x="365" y="422" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#fff">BOOK NOW</text>
+	</g>
+
+	<!-- NFC: tap waves off the phone -->
+	<g fill="none" stroke="#106ebe" stroke-linecap="round" stroke-width="3">
+		<path d="M476 118 a14 14 0 0 1 0 28" opacity=".55"/>
+		<path d="M484 106 a28 28 0 0 1 0 52" opacity=".35"/>
+		<path d="M492 94 a42 42 0 0 1 0 76" opacity=".2"/>
 	</g>
 
 	<!-- Scan beam -->
-	<path d="M222 300 C 245 290, 252 270, 268 262" fill="none" stroke="#d98a3a" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round"/>
-	<circle cx="268" cy="262" r="5" fill="#d98a3a"/>
+	<path d="M222 300 C 245 290, 252 270, 268 262" fill="none" stroke="#106ebe" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round"/>
+	<circle cx="268" cy="262" r="5" fill="#106ebe"/>
 </svg>

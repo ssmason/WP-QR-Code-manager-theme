@@ -28,8 +28,11 @@ export default defineConfig({
 
     // Generate the theme.json file in the public/build/assets directory
     // based on the Tailwind config and the theme.json file from base theme folder
+    // Tailwind's ~250 colours are not offered in the editor: as presets they
+    // added ~100 KB of unused inline CSS to every page. The theme's own palette
+    // (theme.json) is kept.
     wordpressThemeJson({
-      disableTailwindColors: false,
+      disableTailwindColors: true,
       disableTailwindFonts: false,
       disableTailwindFontSizes: false,
       disableTailwindBorderRadius: false,

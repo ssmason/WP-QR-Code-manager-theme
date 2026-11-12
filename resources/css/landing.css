@@ -1,6 +1,6 @@
 /*
- * Landing styles — site header/footer patterns and the marketing pages
- * (Home, Register) built from the theme's landing patterns.
+ * Landing styles - site header/footer patterns and the marketing pages
+ * (Home, Register, Contact) built from the theme's landing patterns.
  *
  * Owned by the theme so the public site keeps its look with or without the
  * Satori Manifest plugin. Block classes used by the patterns:
@@ -10,28 +10,38 @@
  * Page content is scoped to .landing (template-landing.blade.php) and to the
  * block editor canvas so other theme pages are unaffected.
  *
- * Palette and type follow the Satori Digital brand: ink navy, amber accents,
- * Fraunces headings, Inter body text and JetBrains Mono for small labels.
- * Fonts are imported at the top of app.css / landing-editor.css, because
- * url() imports must precede all other rules.
+ * Colours, fonts and finish come from brand.css (the single brand file);
+ * this file only uses them. Layout values are below.
  */
 
 :root {
-  /* Colour */
-  --landing-bg: #faf8f4;
-  --landing-surface: #fff;
-  --landing-tint: #f2eee6;
-  --landing-text: #0b1620;
-  --landing-ink-soft: #132632;
-  --landing-muted: #4f5d68;
-  --landing-steel: #afc2cc;
-  --landing-accent: #f2a65a;
-  --landing-accent-text: #0b1620;
-  --landing-accent-strong: #8a4f0f;
-  --landing-border: #e6e0d6;
+  /* Brand (colours, fonts, finish): see brand.css. These names keep the
+     landing styles readable; change values in brand.css, not here. */
+  --landing-bg: var(--brand-bg);
+  --landing-surface: var(--brand-surface);
+  --landing-tint: var(--brand-tint);
+  --landing-text: var(--brand-ink);
+  --landing-ink-soft: var(--brand-ink-soft);
+  --landing-muted: var(--brand-muted);
+  --landing-steel: var(--brand-steel);
+  --landing-on-dark: var(--brand-on-dark);
+  --landing-accent: var(--brand-accent);
+  --landing-accent-hover: var(--brand-accent-hover);
+  --landing-accent-text: var(--brand-accent-text);
+  --landing-accent-strong: var(--brand-accent-strong);
+  --landing-border: var(--brand-border);
+  --landing-band: var(--brand-band);
+  --landing-brand-gradient: linear-gradient(90deg, var(--landing-text), var(--landing-ink-soft), var(--landing-accent-strong), var(--landing-accent));
+  --landing-header-bg: var(--brand-header);
+  --landing-header-text: var(--brand-header-text);
+  --landing-sand-light: var(--brand-sand-light);
+  --landing-radius: var(--brand-radius);
+  --landing-shadow: var(--brand-shadow);
+  --landing-font-heading: var(--brand-font-heading);
+  --landing-font-body: var(--brand-font-body);
+  --landing-font-mono: var(--brand-font-mono);
 
-  /* Shape and layout */
-  --landing-radius: 16px;
+  /* Layout */
   --landing-wide: 74rem;
   --landing-content: 46rem;
   --landing-gutter: clamp(1.25rem, 4vw, 2.5rem);
@@ -39,17 +49,6 @@
   /* One container for header, footer and wide sections, so every left and
      right edge lines up: full width minus the gutters, capped at --landing-wide. */
   --landing-container: min(100% - 2 * var(--landing-gutter), var(--landing-wide));
-
-  /* Warm sand of the hero glow, used solid for the header, and a lighter
-     version for alternate page sections. */
-  --landing-header-bg: #f8e6d2;
-  --landing-sand-light: #fcf2e8;
-  --landing-shadow: 0 1px 2px rgb(11 22 32 / 0.04), 0 18px 40px -24px rgb(11 22 32 / 0.35);
-
-  /* Type */
-  --landing-font-heading: "Fraunces", georgia, serif;
-  --landing-font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --landing-font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", menlo, monospace;
 }
 
 /* ─── Header pattern ─────────────────────────────────────────────────────── */
@@ -59,9 +58,8 @@
   top: 0;
   z-index: 50;
   border-bottom: 1px solid var(--landing-border);
-  border-bottom-color: rgb(138 79 15 / 0.12);
+  border-bottom-color: color-mix(in srgb, var(--landing-text) 15%, transparent);
   background: var(--landing-header-bg);
-  backdrop-filter: saturate(1.4) blur(10px);
   font-family: var(--landing-font-body);
 }
 
@@ -74,7 +72,7 @@
   margin-inline: auto;
   padding: 0.85rem 0;
   gap: 1rem 2rem;
-  color: var(--landing-text);
+  color: var(--landing-header-text);
 
   /* Logo mark + name + "by Satori Digital". */
   & .site-header__brand {
@@ -84,6 +82,7 @@
   & .wp-block-site-logo img {
     width: auto;
     height: 2.6rem;
+    filter: var(--brand-header-logo);
   }
 
   & .wp-block-site-title {
@@ -102,7 +101,7 @@
 
   & .site-header__by {
     margin: 0.1rem 0 0;
-    color: var(--landing-muted);
+    color: color-mix(in srgb, var(--landing-header-text) 75%, transparent);
     font-family: var(--landing-font-mono);
     font-size: 0.66rem;
     letter-spacing: 0.08em;
@@ -113,7 +112,7 @@
       text-decoration: none;
 
       &:hover {
-        color: var(--landing-accent-strong);
+        color: var(--landing-accent);
       }
     }
   }
@@ -124,13 +123,16 @@
     font-weight: 500;
 
     & a:hover {
-      color: var(--landing-accent-strong);
+      color: var(--landing-accent);
     }
   }
 
+  /* Full-screen mobile menu: same colours as the header. (No backdrop-filter
+     on .header-theme: it would trap this fixed overlay inside the header.) */
   & .wp-block-navigation__responsive-container.is-menu-open {
     padding: 1.5rem var(--landing-gutter);
-    background: var(--landing-header-bg);
+    background-color: var(--landing-header-bg) !important;
+    color: var(--landing-header-text) !important;
     font-size: 1.15rem;
   }
 
@@ -159,7 +161,7 @@
 
   & .wp-block-site-title {
     margin: 0 0 0.35rem;
-    color: #fff;
+    color: var(--landing-on-dark);
     font-family: var(--landing-font-heading);
     font-size: 1.4rem;
     font-weight: 600;
@@ -200,15 +202,40 @@
     }
   }
 
+  /* Settings → Social links, via the [social_links] shortcode. */
+  & .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.1rem 0 0;
+    padding: 0;
+    list-style: none;
+
+    & a {
+      display: grid;
+      place-items: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      border: 1px solid color-mix(in srgb, var(--landing-steel) 30%, transparent);
+      border-radius: 999px;
+      transition: border-color 0.15s, color 0.15s;
+
+      &:hover,
+      &:focus-visible {
+        border-color: var(--landing-accent);
+      }
+    }
+  }
+
   & .site-footer__bottom {
     margin-top: 2rem;
     padding-top: 1.25rem;
-    border-top: 1px solid rgb(175 194 204 / 0.18);
+    border-top: 1px solid color-mix(in srgb, var(--landing-steel) 18%, transparent);
     font-size: 0.8rem;
   }
 
   & a {
-    color: #fff;
+    color: var(--landing-on-dark);
     text-decoration: none;
 
     &:hover,
@@ -217,8 +244,8 @@
     }
   }
 
-  /* External links open in a new window — say so with an arrow. */
-  & a[target="_blank"]:not(:has(img))::after {
+  /* External links open in a new window - say so with an arrow. */
+  & a[target="_blank"]:not(:has(img, svg))::after {
     content: " ↗";
     font-size: 0.8em;
     opacity: 0.6;
@@ -245,11 +272,11 @@
     font-weight: 600;
     line-height: 1.2;
     text-decoration: none;
-    box-shadow: 0 12px 24px -14px rgb(217 138 58 / 0.9);
+    box-shadow: var(--brand-button-shadow);
     transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
 
     &:hover {
-      background: #f5b574;
+      background: var(--landing-accent-hover);
       transform: translateY(-1px);
     }
 
@@ -267,7 +294,7 @@
 
     &:hover {
       background: var(--landing-text);
-      color: #fff;
+      color: var(--landing-on-dark);
     }
   }
 }
@@ -422,11 +449,31 @@
 
   /* Hero */
   & .landing-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     padding: clamp(2.5rem, 7vw, 5.5rem) var(--landing-gutter) clamp(3rem, 8vw, 6rem);
     background:
-      radial-gradient(55% 70% at 95% 15%, rgb(242 166 90 / 0.22) 0%, transparent 65%),
-      radial-gradient(45% 55% at 5% 35%, rgb(19 38 50 / 0.07) 0%, transparent 70%),
+      radial-gradient(55% 70% at 95% 15%, color-mix(in srgb, var(--landing-accent) 22%, transparent) 0%, transparent 65%),
+      radial-gradient(45% 55% at 5% 35%, color-mix(in srgb, var(--landing-ink-soft) 7%, transparent) 0%, transparent 70%),
       var(--landing-bg);
+
+    /* Faint QR-code texture on the left, behind the text, fading out towards the artwork.
+       The SVG is only a mask: its colour and strength come from brand.css. */
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -8% auto -8% -6%;
+      width: min(62%, 860px);
+      background: var(--brand-hero-pattern);
+      opacity: var(--brand-hero-pattern-strength);
+      mask:
+        url("../images/landing/qr-pattern.svg") left center / auto 100% no-repeat,
+        linear-gradient(to right, #000 30%, transparent 95%);
+      mask-composite: intersect;
+      pointer-events: none;
+    }
   }
 
   & .landing-hero__inner {
@@ -469,10 +516,20 @@
     letter-spacing: -0.04em;
   }
 
-  /* Tinted band */
+  /* Solid brand band ("Everything you need"): white text on --landing-band. */
   & .landing-band {
     padding-inline: var(--landing-gutter);
-    background: var(--landing-tint);
+    background: var(--landing-band);
+    color: var(--landing-on-dark);
+
+    & h2,
+    & h3 {
+      color: var(--landing-on-dark);
+    }
+
+    & .landing-features p {
+      color: color-mix(in srgb, var(--landing-on-dark) 82%, transparent);
+    }
 
     & > .landing-section {
       max-width: var(--landing-wide);
@@ -514,7 +571,7 @@
       position: absolute;
       inset: 0 0 auto;
       height: 6px;
-      background: var(--landing-card-tint, var(--landing-accent));
+      background: var(--landing-card-gradient, var(--landing-brand-gradient));
     }
 
     & h3 {
@@ -524,11 +581,57 @@
     }
   }
 
-  & .landing-card--atelier { --landing-card-tint: #a0704c; }
-  & .landing-card--studio { --landing-card-tint: #e4572e; }
-  & .landing-card--noir { --landing-card-tint: #c9a45c; }
-  & .landing-card--bloom { --landing-card-tint: #d46a84; }
-  & .landing-card--mono { --landing-card-tint: #161616; }
+  /* Card tops: a different blue-led gradient per card; links step through the blues. */
+  & .landing-card--atelier {
+    --landing-card-tint: var(--landing-text);
+    --landing-card-gradient: linear-gradient(90deg, var(--landing-text), var(--landing-accent-strong));
+  }
+
+  & .landing-card--studio {
+    --landing-card-tint: var(--landing-ink-soft);
+    --landing-card-gradient: linear-gradient(90deg, var(--landing-accent-strong), var(--landing-ink-soft) 60%, var(--landing-accent));
+  }
+
+  & .landing-card--noir {
+    --landing-card-tint: var(--landing-accent-strong);
+    --landing-card-gradient: linear-gradient(90deg, var(--landing-ink-soft), var(--landing-accent-strong), var(--landing-text));
+  }
+
+  & .landing-card--bloom {
+    --landing-card-tint: color-mix(in srgb, var(--landing-accent-strong) 50%, var(--landing-accent));
+    --landing-card-gradient: linear-gradient(90deg, var(--landing-accent-strong), var(--landing-accent));
+  }
+
+  & .landing-card--mono {
+    --landing-card-tint: var(--landing-accent);
+    --landing-card-gradient: linear-gradient(90deg, var(--landing-accent), var(--landing-accent-strong) 45%, var(--landing-text));
+  }
+
+  /* Layouts card under the five designs: same card, full width. */
+  & .landing-card--layouts {
+    --landing-card-tint: var(--landing-accent-strong);
+
+    position: relative;
+    overflow: hidden;
+    max-width: 52rem;
+    margin: 2rem auto 0;
+    padding-top: 2.1rem;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: var(--landing-brand-gradient);
+    }
+
+    & h3 {
+      font-family: var(--landing-font-heading);
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
 
   & .landing-card__tag {
     margin-bottom: 0.5rem;
@@ -621,7 +724,7 @@
         width: 1.9rem;
         height: 1.9rem;
         border-radius: 50%;
-        background: rgb(242 166 90 / 0.18);
+        background: color-mix(in srgb, var(--landing-accent) 18%, transparent);
         color: var(--landing-accent-strong);
         font-size: 1.25rem;
         font-weight: 500;
@@ -650,12 +753,12 @@
   & .landing-cta {
     padding: clamp(3.5rem, 9vw, 6rem) var(--landing-gutter);
     background:
-      radial-gradient(60% 120% at 50% 0%, rgb(242 166 90 / 0.18) 0%, transparent 70%),
+      radial-gradient(60% 120% at 50% 0%, color-mix(in srgb, var(--landing-accent) 18%, transparent) 0%, transparent 70%),
       var(--landing-ink-soft);
-    color: #fff;
+    color: var(--landing-on-dark);
 
     & h2 {
-      color: #fff;
+      color: var(--landing-on-dark);
     }
 
     & p {
@@ -682,7 +785,9 @@
   }
 
   & > .wp-block-satori-manifest-registration-form,
-  & .is-root-container > .wp-block-satori-manifest-registration-form {
+  & > .wp-block-satori-manifest-contact-form,
+  & .is-root-container > .wp-block-satori-manifest-registration-form,
+  & .is-root-container > .wp-block-satori-manifest-contact-form {
     width: var(--landing-container);
     max-width: none;
     padding-inline: 0;
@@ -754,12 +859,14 @@
 }
 
 /*
- * Satori Manifest registration form (plugin block). The plugin ships complete
+ * Satori Manifest registration and contact forms (plugin blocks). The plugin ships complete
  * styles driven by --sm-form-* custom properties; the theme only maps its
  * landing palette and fonts onto them.
  */
 .landing .wp-block-satori-manifest-registration-form,
-.editor-styles-wrapper .wp-block-satori-manifest-registration-form {
+.landing .wp-block-satori-manifest-contact-form,
+.editor-styles-wrapper .wp-block-satori-manifest-registration-form,
+.editor-styles-wrapper .wp-block-satori-manifest-contact-form {
   --sm-form-accent: var(--landing-accent);
   --sm-form-accent-text: var(--landing-accent-text);
   --sm-form-accent-strong: var(--landing-accent-strong);

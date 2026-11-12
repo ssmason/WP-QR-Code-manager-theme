@@ -30,17 +30,13 @@
       "button": true,
       "caption": true,
       "palette": [
-        { "slug": "primary",   "color": "#736e48", "name": "Primary" },
-        { "slug": "secondary", "color": "#fbf4c9", "name": "Secondary" },
-        { "slug": "white",     "color": "#FDFAF5", "name": "White" },
-        { "slug": "cream",     "color": "#F5F0E8", "name": "Cream" },
-        { "slug": "warm",      "color": "#EDE6D6", "name": "Warm" },
-        { "slug": "sand",      "color": "#D4C5A9", "name": "Sand" },
-        { "slug": "stone",     "color": "#9A8A75", "name": "Stone" },
-        { "slug": "mid",       "color": "#5C4E3A", "name": "Mid" },
-        { "slug": "dark",      "color": "#1C1712", "name": "Dark" },
-        { "slug": "terra",     "color": "#B5704A", "name": "Terra" },
-        { "slug": "terra-dk",  "color": "#8C4E2F", "name": "Terra Dark" }
+        { "slug": "ink",    "color": "#031a57", "name": "Navy" },
+        { "slug": "blue",   "color": "#106ebe", "name": "Blue" },
+        { "slug": "accent", "color": "#0ffcbe", "name": "Mint" },
+        { "slug": "muted",  "color": "#43506e", "name": "Muted" },
+        { "slug": "tint",   "color": "#d9e8f6", "name": "Light blue" },
+        { "slug": "bg",     "color": "#f3f8fc", "name": "Background" },
+        { "slug": "white",  "color": "#ffffff", "name": "White" }
       ]
     },
     "custom": {
