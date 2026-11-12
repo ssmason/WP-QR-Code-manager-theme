@@ -513,8 +513,8 @@
     padding-bottom: calc(1.75rem + var(--landing-finder) + 1rem);
     border-top: 3px solid var(--landing-accent);
 
-    /* Faint QR texture in each corner (about a quarter of the card each),
-       fading towards the middle. Same mask and strength as the hero. */
+    /* Faint QR texture in the top-left quarter, fading out towards the
+       middle. Same mask as the hero; strength set in brand.css. */
     & > h3::before {
       position: absolute;
       z-index: -1;
@@ -522,14 +522,11 @@
       border-radius: inherit;
       background: var(--brand-hero-pattern);
       content: "";
-      opacity: var(--brand-hero-pattern-strength);
+      opacity: var(--brand-card-pattern-strength);
       mask:
-        url("../images/landing/qr-pattern.svg") center / 220px 220px repeat,
-        radial-gradient(50% 50% at 0 0, #000, transparent),
-        radial-gradient(50% 50% at 100% 0, #000, transparent),
-        radial-gradient(50% 50% at 0 100%, #000, transparent),
-        radial-gradient(50% 50% at 100% 100%, #000, transparent);
-      mask-composite: intersect, add, add, add;
+        url("../images/landing/qr-pattern.svg") 0 0 / 220px 220px repeat,
+        radial-gradient(60% 60% at 0 0, #000 35%, transparent);
+      mask-composite: intersect;
       pointer-events: none;
     }
 

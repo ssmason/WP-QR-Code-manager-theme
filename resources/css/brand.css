@@ -45,6 +45,7 @@
   --brand-band: #106ebe;          /* solid blue band ("Everything you need"), white text */
   --brand-hero-pattern: #106ebe;  /* faint QR texture behind the Home hero */
   --brand-hero-pattern-strength: 0.07; /* 0 = off, 0.15 = strong */
+  --brand-card-pattern-strength: 0.14; /* same texture in the How it works cards */
 
   /* ── Type ─────────────────────────────────────────────────────────── */
   --brand-font-heading: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
