@@ -752,9 +752,7 @@
   /* Closing call to action */
   & .landing-cta {
     padding: clamp(3.5rem, 9vw, 6rem) var(--landing-gutter);
-    background:
-      radial-gradient(60% 120% at 50% 0%, color-mix(in srgb, var(--landing-accent) 18%, transparent) 0%, transparent 70%),
-      var(--landing-ink-soft);
+    background: var(--landing-band);
     color: var(--landing-on-dark);
 
     & h2 {
@@ -762,7 +760,7 @@
     }
 
     & p {
-      color: var(--landing-steel);
+      color: color-mix(in srgb, var(--landing-on-dark) 88%, transparent);
     }
 
     & .wp-block-buttons {
