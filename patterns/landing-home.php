@@ -307,7 +307,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-faq__ask"} -->
-<p class="landing-faq__ask">Something else? <a href="https://satori-digital.com/" target="_blank" rel="noreferrer noopener">Ask us anything</a></p>
+<p class="landing-faq__ask">Something else? <a href="/contact/">Ask us anything</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
