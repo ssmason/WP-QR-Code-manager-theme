@@ -484,6 +484,7 @@
 
   & .landing-hero h1 {
     max-width: 12ch;
+    text-wrap: balance;
   }
 
   & .landing-hero__art img {

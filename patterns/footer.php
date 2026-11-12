@@ -21,7 +21,7 @@ $qr_code_manager_logo = wp_make_link_relative( \Illuminate\Support\Facades\Vite:
 <!-- wp:site-title {"level":0} /-->
 
 <!-- wp:paragraph {"className":"site-footer__muted"} -->
-<p class="site-footer__muted">QR code price lists and menus that stay up to date. Designed, hosted and supported by Satori Digital.</p>
+<p class="site-footer__muted">QR and NFC price lists and menus that stay up to date. Designed, hosted and supported by Satori Digital.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:shortcode -->
@@ -66,6 +66,10 @@ $qr_code_manager_logo = wp_make_link_relative( \Illuminate\Support\Facades\Vite:
 
 <!-- wp:paragraph -->
 <p><a href="https://en.wikipedia.org/wiki/QR_code" target="_blank" rel="noreferrer noopener">What is a QR code?</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="https://en.wikipedia.org/wiki/Near-field_communication" target="_blank" rel="noreferrer noopener">What is NFC?</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
