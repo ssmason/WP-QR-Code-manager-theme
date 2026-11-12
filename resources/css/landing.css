@@ -525,7 +525,7 @@
       opacity: var(--brand-card-pattern-strength);
       mask:
         url("../images/landing/qr-pattern.svg") 0 0 / 220px 220px repeat,
-        radial-gradient(60% 60% at 0 0, #000 35%, transparent);
+        radial-gradient(75% 75% at 0 0, #000 35%, transparent);
       mask-composite: intersect;
       pointer-events: none;
     }
