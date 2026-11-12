@@ -15,15 +15,15 @@
 <div class="wp-block-group alignfull landing-hero"><!-- wp:columns {"verticalAlignment":"center","className":"landing-hero__inner"} -->
 <div class="wp-block-columns are-vertically-aligned-center landing-hero__inner"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"className":"landing-eyebrow"} -->
-<p class="landing-eyebrow">QR code price lists &amp; menus</p>
+<p class="landing-eyebrow">QR &amp; NFC price lists and menus</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">Your price list, one scan away.</h1>
+<h1 class="wp-block-heading">Your price list, one scan or tap away.</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">Prices change. Your printed menu shouldn't have to. We make you a durable QR sign; customers scan it and see your prices on a page that looks like your brand. Change a price once and it's live in seconds, with no reprinting ever.</p>
+<p class="landing-lead">Prices change. Your printed menu shouldn't have to. We make you a durable QR and NFC sign; customers scan or tap it and see your prices on a page that looks like your brand. Change a price once and it's live in seconds, with no reprinting ever.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -65,11 +65,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">We print your QR code</h3>
+<h3 class="wp-block-heading">We make your sign</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Table cards, stickers or window signs: your code is printed and sent to you, ready to put out.</p>
+<p>Table cards, stickers or window signs with your QR code and NFC tag built in, printed and posted to you ready to put out.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -93,7 +93,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Customers scan &amp; browse</h3>
+<h3 class="wp-block-heading">Customers scan or tap</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -116,7 +116,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>No reprinting when prices change. Edit once and it's live everywhere your code is.</p>
+<p>No reprinting when prices change. Edit once and it's live on every sign you've put out.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -173,11 +173,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Five looks to start from</h2>
+<h2 class="wp-block-heading has-text-align-center">Nine looks to start from</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"landing-lead"} -->
-<p class="has-text-align-center landing-lead">Every design is a starting point. Change colours, fonts and layout to suit you, and switch whenever you like. Add ready-made layouts for photos and full menu pages.</p>
+<p class="has-text-align-center landing-lead">Atelier, Studio, Noir, Bloom and Mono below, plus Harbour, Morning, Serene and Edge. Every design is a starting point. Change colours, fonts and layout to suit you, and switch whenever you like. Add ready-made layouts for photos and full menu pages.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"className":"landing-design-cards"} -->
@@ -282,7 +282,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Build a full menu page in a few clicks: a photo hero, menu sections, a menu in two columns, a photo strip, a closing banner, or the whole page at once. Add your photos, choose which sections each list shows, done. They work with every design and look right on phones.</p>
+<p>Build a full menu page in a few clicks: a photo hero, menu sections, a two-column menu, a photo strip and a closing banner, or the whole page at once. Works with every design and looks right on phones.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
@@ -331,6 +331,12 @@
 <!-- /wp:details -->
 
 <!-- wp:details -->
+<details class="wp-block-details"><summary>What's NFC?</summary><!-- wp:paragraph -->
+<p>A small chip inside your sign. Customers hold their phone near it and your page opens, with no camera needed. Works on modern iPhones and Android phones.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
 <details class="wp-block-details"><summary>Can you make a stand or sign for my QR code?</summary><!-- wp:paragraph -->
 <p>Yes. Our sister studio, <a href="https://3dprinting.satori-digital.com/" target="_blank" rel="noreferrer noopener">Satori 3D Printing</a>, makes custom counter stands, table signs and illuminated displays to hold your code.</p>
 <!-- /wp:paragraph --></details>
@@ -338,7 +344,7 @@
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>How do I get started?</summary><!-- wp:paragraph -->
-<p>Choose your plan and pay securely. Your account is ready straight away and we email you your login link.</p>
+<p>Choose a plan and start your 30-day free trial. Your account is ready straight away and we email you a link to set your password.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></div>
 <!-- /wp:column --></div>
