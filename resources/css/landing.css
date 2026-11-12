@@ -45,6 +45,7 @@
   --landing-wide: 74rem;
   --landing-content: 46rem;
   --landing-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --landing-header-height: 78px; /* sticky nav bar, used to fit the hero to the screen */
 
   /* One container for header, footer and wide sections, so every left and
      right edge lines up: full width minus the gutters, capped at --landing-wide. */
@@ -872,6 +873,32 @@
     max-width: none;
     padding-inline: 0;
     padding-bottom: 2rem;
+  }
+}
+
+/* ─── Hero fits the screen ───────────────────────────────────────────────── */
+
+/* Laptops and desktops up to 1600px wide, landscape: the hero fills the
+   screen below the nav bar, content centred, artwork shrinking on short
+   screens. Bigger screens and phones keep the natural height. */
+@media (min-width: 782px) and (max-width: 1599px) and (orientation: landscape) {
+  .landing {
+    & .landing-hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: calc(100svh - var(--landing-header-height));
+      padding-block: clamp(1.5rem, 5svh, 5.5rem) clamp(1.5rem, 6svh, 6rem);
+    }
+
+    & .landing-hero__inner {
+      width: 100%;
+    }
+
+    & .landing-hero__art img {
+      width: auto;
+      max-height: calc(100svh - var(--landing-header-height) - 4rem);
+    }
   }
 }
 
