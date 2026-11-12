@@ -23,7 +23,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">Prices change. Your printed menu shouldn't have to. We make you a durable QR sign; customers scan it and see your prices on a page that looks like your brand. Change a price from your phone and it's live in seconds, with no reprinting ever.</p>
+<p class="landing-lead">Prices change. Your printed menu shouldn't have to. We make you a durable QR sign; customers scan it and see your prices on a page that looks like your brand. Change a price once and it's live in seconds, with no reprinting ever.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -97,7 +97,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Prices change? Update them from your phone and every printed code shows the new list instantly.</p>
+<p>Prices change? Update them in your dashboard, from any device, and every printed code shows the new list instantly.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
