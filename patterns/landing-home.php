@@ -177,7 +177,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"landing-lead"} -->
-<p class="has-text-align-center landing-lead">Every design is a starting point. Change colours, fonts and layout to suit you, and switch whenever you like. Add ready-made layouts for photos and full menu pages.</p>
+<p class="has-text-align-center landing-lead">Atelier, Studio, Noir, Bloom and Mono below, plus Harbour, Morning, Serene and Edge. Every design is a starting point. Change colours, fonts and layout to suit you, and switch whenever you like. Add ready-made layouts for photos and full menu pages.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"className":"landing-design-cards"} -->
@@ -288,94 +288,6 @@
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
 <p class="landing-card__link"><a href="/daily-grind-coffee/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"className":"landing-card landing-card--harbour"} -->
-<div class="wp-block-column landing-card landing-card--harbour"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/harbour.jpg' ) ) ); ?>" alt="The Harbour design on a phone" width="585" height="2250" loading="lazy"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"landing-card__tag"} -->
-<p class="landing-card__tag">Restaurants &amp; seafood</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Harbour</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>A big photo hero, the menu in chapters and a harbour banner to finish.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="/the-anchor/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"className":"landing-card landing-card--morning"} -->
-<div class="wp-block-column landing-card landing-card--morning"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/morning.jpg' ) ) ); ?>" alt="The Morning design on a phone" width="585" height="2250" loading="lazy"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"landing-card__tag"} -->
-<p class="landing-card__tag">Cafés &amp; brunch</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Morning</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Text beside a big photo, menu cards and a row of photos.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="/sunday-kitchen/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"className":"landing-card landing-card--serene"} -->
-<div class="wp-block-column landing-card landing-card--serene"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/serene.jpg' ) ) ); ?>" alt="The Serene design on a phone" width="585" height="2250" loading="lazy"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"landing-card__tag"} -->
-<p class="landing-card__tag">Spas &amp; treatments</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Serene</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Soft photos, a calm welcome and prices with dotted leaders.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="/stillwater-spa/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"className":"landing-card landing-card--edge"} -->
-<div class="wp-block-column landing-card landing-card--edge"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/edge.jpg' ) ) ); ?>" alt="The Edge design on a phone" width="585" height="2250" loading="lazy"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"landing-card__tag"} -->
-<p class="landing-card__tag">Barbers</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Edge</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Big condensed headlines, a two-column price list and a brass banner.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="/ironside-barbers/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
