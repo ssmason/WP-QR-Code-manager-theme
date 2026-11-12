@@ -717,6 +717,68 @@
     }
   }
 
+  /* Design previews: the top of each card is the card's gradient with a
+     phone showing the live demo page; hovering scrolls the page. */
+  & .landing-design-cards .landing-card,
+  & .landing-card--layouts {
+    padding-top: 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      box-shadow: 0 24px 48px -24px color-mix(in srgb, var(--landing-text) 45%, transparent);
+      transform: translateY(-4px);
+    }
+  }
+
+  & .landing-card__preview {
+    --landing-preview-height: 15rem;
+
+    display: flex;
+    justify-content: center;
+    height: var(--landing-preview-height);
+    margin: 0 -1.75rem 1.4rem;
+    padding-top: 1.4rem;
+    overflow: hidden;
+    background:
+      radial-gradient(80% 60% at 50% 100%, color-mix(in srgb, var(--landing-surface) 35%, transparent), transparent 70%),
+      var(--landing-card-gradient, var(--landing-brand-gradient));
+
+    & img {
+      align-self: flex-start;
+      width: min(68%, 11rem);
+      height: auto;
+      border: 5px solid var(--landing-text);
+      border-bottom: 0;
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 -6px 30px -10px color-mix(in srgb, var(--landing-text) 60%, transparent);
+      transition: transform 4s ease-in-out;
+    }
+  }
+
+  & .landing-card:hover .landing-card__preview img {
+    transform: translateY(calc(-100% + var(--landing-preview-height) - 1.4rem));
+  }
+
+  & .landing-card--layouts .landing-card__preview {
+    --landing-preview-height: 17rem;
+
+    & img {
+      width: 13rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    & .landing-card__preview img,
+    & .landing-design-cards .landing-card,
+    & .landing-card--layouts {
+      transition: none;
+    }
+  }
+
   & .landing-card__tag {
     margin-bottom: 0.5rem;
     color: var(--landing-muted);

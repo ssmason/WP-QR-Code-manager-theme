@@ -182,7 +182,11 @@
 
 <!-- wp:columns {"className":"landing-design-cards"} -->
 <div class="wp-block-columns landing-design-cards"><!-- wp:column {"className":"landing-card landing-card--atelier"} -->
-<div class="wp-block-column landing-card landing-card--atelier"><!-- wp:paragraph {"className":"landing-card__tag"} -->
+<div class="wp-block-column landing-card landing-card--atelier"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/atelier.jpg' ) ) ); ?>" alt="The Atelier design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
 <p class="landing-card__tag">Salons &amp; spas</p>
 <!-- /wp:paragraph -->
 
@@ -200,7 +204,11 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"landing-card landing-card--studio"} -->
-<div class="wp-block-column landing-card landing-card--studio"><!-- wp:paragraph {"className":"landing-card__tag"} -->
+<div class="wp-block-column landing-card landing-card--studio"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/studio.jpg' ) ) ); ?>" alt="The Studio design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
 <p class="landing-card__tag">Barbers &amp; studios</p>
 <!-- /wp:paragraph -->
 
@@ -218,7 +226,11 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"landing-card landing-card--noir"} -->
-<div class="wp-block-column landing-card landing-card--noir"><!-- wp:paragraph {"className":"landing-card__tag"} -->
+<div class="wp-block-column landing-card landing-card--noir"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/noir.jpg' ) ) ); ?>" alt="The Noir design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
 <p class="landing-card__tag">Bars &amp; restaurants</p>
 <!-- /wp:paragraph -->
 
@@ -236,7 +248,11 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"landing-card landing-card--bloom"} -->
-<div class="wp-block-column landing-card landing-card--bloom"><!-- wp:paragraph {"className":"landing-card__tag"} -->
+<div class="wp-block-column landing-card landing-card--bloom"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/bloom.jpg' ) ) ); ?>" alt="The Bloom design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
 <p class="landing-card__tag">Nails &amp; beauty</p>
 <!-- /wp:paragraph -->
 
@@ -254,7 +270,11 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"landing-card landing-card--mono"} -->
-<div class="wp-block-column landing-card landing-card--mono"><!-- wp:paragraph {"className":"landing-card__tag"} -->
+<div class="wp-block-column landing-card landing-card--mono"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/mono.jpg' ) ) ); ?>" alt="The Mono design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
 <p class="landing-card__tag">Cafés</p>
 <!-- /wp:paragraph -->
 
@@ -273,7 +293,11 @@
 <!-- /wp:columns -->
 
 <!-- wp:group {"className":"landing-card landing-card--layouts"} -->
-<div class="wp-block-group landing-card landing-card--layouts"><!-- wp:paragraph {"className":"landing-card__tag"} -->
+<div class="wp-block-group landing-card landing-card--layouts"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/layouts.jpg' ) ) ); ?>" alt="A full menu page built from the ready-made layouts" width="585" height="2250" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
 <p class="landing-card__tag">Restaurants &amp; cafés</p>
 <!-- /wp:paragraph -->
 
