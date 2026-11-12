@@ -508,9 +508,30 @@
     --landing-finder-fill: color-mix(in srgb, var(--landing-accent-strong) 14%, var(--landing-surface));
 
     position: relative;
+    isolation: isolate;
     padding-top: 2rem;
     padding-bottom: calc(1.75rem + var(--landing-finder) + 1rem);
     border-top: 3px solid var(--landing-accent);
+
+    /* Faint QR texture in each corner (about a quarter of the card each),
+       fading towards the middle. Same mask and strength as the hero. */
+    & > h3::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      border-radius: inherit;
+      background: var(--brand-hero-pattern);
+      content: "";
+      opacity: var(--brand-hero-pattern-strength);
+      mask:
+        url("../images/landing/qr-pattern.svg") center / 220px 220px repeat,
+        radial-gradient(50% 50% at 0 0, #000, transparent),
+        radial-gradient(50% 50% at 100% 0, #000, transparent),
+        radial-gradient(50% 50% at 0 100%, #000, transparent),
+        radial-gradient(50% 50% at 100% 100%, #000, transparent);
+      mask-composite: intersect, add, add, add;
+      pointer-events: none;
+    }
 
     &::before,
     &::after,
