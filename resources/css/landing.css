@@ -691,6 +691,45 @@
     --landing-card-gradient: linear-gradient(90deg, var(--landing-accent), var(--landing-accent-strong) 45%, var(--landing-text));
   }
 
+  & .landing-card--harbour {
+    --landing-card-tint: var(--landing-accent-strong);
+    --landing-card-gradient: linear-gradient(135deg, var(--landing-text), var(--landing-accent-strong) 70%);
+  }
+
+  & .landing-card--morning {
+    --landing-card-tint: var(--landing-accent);
+    --landing-card-gradient: linear-gradient(135deg, var(--landing-accent-strong), var(--landing-accent));
+  }
+
+  & .landing-card--serene {
+    --landing-card-tint: var(--landing-ink-soft);
+    --landing-card-gradient: linear-gradient(135deg, var(--landing-ink-soft), var(--landing-accent-strong) 55%, var(--landing-ink-soft));
+  }
+
+  & .landing-card--edge {
+    --landing-card-tint: var(--landing-text);
+    --landing-card-gradient: linear-gradient(135deg, var(--landing-accent-strong), var(--landing-text) 65%);
+  }
+
+  /* Nine design cards: three across on desktop, two on tablets, one on phones. */
+  & .wp-block-columns.landing-design-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    & > .wp-block-column {
+      margin: 0;
+    }
+
+    @media (max-width: 960px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   /* Layouts card under the five designs: same card, full width. */
   & .landing-card--layouts {
     --landing-card-tint: var(--landing-accent-strong);
