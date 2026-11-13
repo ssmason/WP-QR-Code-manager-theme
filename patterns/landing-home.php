@@ -167,6 +167,62 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
+<!-- wp:group {"anchor":"ai-assistant","align":"wide","className":"landing-section landing-ai"} -->
+<div id="ai-assistant" class="wp-block-group alignwide landing-section landing-ai"><!-- wp:columns {"verticalAlignment":"center","className":"landing-ai__inner"} -->
+<div class="wp-block-columns are-vertically-aligned-center landing-ai__inner"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"className":"landing-eyebrow"} -->
+<p class="landing-eyebrow">New · AI assistant</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Change your prices by just asking</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"landing-lead"} -->
+<p class="landing-lead">Connect your page to ChatGPT or another AI app once, then update it from your phone in plain words. No logging in, no forms.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"landing-ai__list"} -->
+<ul class="wp-block-list landing-ai__list"><!-- wp:list-item -->
+<li><strong>Set up in minutes.</strong> Send a photo of your menu and it builds your price list.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Quick changes.</strong> "Guinness is €5.50" or "cocktails up 5%", live straight away.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Safe by design.</strong> It can only change your price list, page details and design, and every change can be undone.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph {"className":"landing-ai__note"} -->
+<p class="landing-ai__note">Included with Fully managed. Works with the AI app you already use.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"className":"landing-chat","layout":{"type":"default"}} -->
+<div class="wp-block-group landing-chat"><!-- wp:paragraph {"className":"landing-chat__msg landing-chat__msg--you"} -->
+<p class="landing-chat__msg landing-chat__msg--you">Put the cocktails up 50 cents and Guinness is €5.50 now.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-chat__msg"} -->
+<p class="landing-chat__msg">Done. 8 cocktails are 50c dearer and Guinness is €5.50. It's live on your page now. Say "undo" to put it back.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-chat__msg landing-chat__msg--you"} -->
+<p class="landing-chat__msg landing-chat__msg--you">Add Sunday roast to Mains, €14.95.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-chat__msg"} -->
+<p class="landing-chat__msg">Added "Sunday roast" to Mains at €14.95.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
 <!-- wp:group {"anchor":"designs","align":"wide","className":"landing-section landing-section--sand"} -->
 <div id="designs" class="wp-block-group alignwide landing-section landing-section--sand"><!-- wp:paragraph {"align":"center","className":"landing-eyebrow"} -->
 <p class="has-text-align-center landing-eyebrow">Designs</p>
@@ -345,6 +401,12 @@
 <!-- wp:details -->
 <details class="wp-block-details"><summary>What happens when my prices change?</summary><!-- wp:paragraph -->
 <p>Log in, edit your prices and save. Your printed QR code always opens the latest version, so there is nothing to reprint.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Can I update my prices with AI?</summary><!-- wp:paragraph -->
+<p>Yes. Connect your page to ChatGPT or another AI app once from a computer, then tell it what to change from your phone. It can only edit your price list, page details and design, and you can undo any change. Included with Fully managed.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 

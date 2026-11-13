@@ -644,6 +644,83 @@
     }
   }
 
+  /* AI assistant: text beside an example chat. */
+  & .landing-ai {
+    & .landing-ai__inner {
+      gap: clamp(2rem, 5vw, 4rem);
+      margin-top: 0;
+    }
+
+    & h2 {
+      margin-inline: 0;
+    }
+
+    & .landing-ai__list {
+      margin: 1.5rem 0;
+      padding: 0;
+      list-style: none;
+
+      & li {
+        position: relative;
+        margin-bottom: 0.85rem;
+        padding-left: 1.6rem;
+        color: var(--landing-muted);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0.55em;
+          left: 0;
+          width: 0.6rem;
+          height: 0.6rem;
+          border-radius: 50%;
+          background: var(--landing-accent);
+        }
+      }
+
+      & strong {
+        color: var(--landing-text);
+      }
+    }
+
+    & .landing-ai__note {
+      color: var(--landing-muted);
+      font-family: var(--landing-font-mono);
+      font-size: 0.84rem;
+    }
+  }
+
+  & .landing-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 26rem;
+    margin-inline: auto;
+    padding: 1.5rem;
+    border: 1px solid var(--landing-border);
+    border-radius: calc(var(--landing-radius) * 1.5);
+    background: var(--landing-surface);
+    box-shadow: var(--landing-shadow);
+
+    & .landing-chat__msg {
+      max-width: 85%;
+      margin: 0;
+      padding: 0.7rem 1rem;
+      border-radius: var(--landing-radius) var(--landing-radius) var(--landing-radius) 4px;
+      background: var(--landing-tint);
+      color: var(--landing-text);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    & .landing-chat__msg--you {
+      align-self: flex-end;
+      border-radius: var(--landing-radius) var(--landing-radius) 4px var(--landing-radius);
+      background: var(--landing-accent);
+      color: var(--landing-accent-text);
+    }
+  }
+
   /* Design cards */
   & .landing-design-cards .landing-card {
     position: relative;
