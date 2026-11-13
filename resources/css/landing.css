@@ -644,6 +644,50 @@
     }
   }
 
+  /* "New" pill in the hero, linking to the AI assistant section. */
+  & .landing-badge {
+    margin: 0 0 1.25rem;
+
+    & a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.3rem 0.9rem 0.3rem 0.3rem;
+      border: 1px solid var(--landing-border);
+      border-radius: 999px;
+      background: var(--landing-surface);
+      color: var(--landing-text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: var(--landing-shadow);
+      transition: border-color 0.15s ease;
+
+      @media (max-width: 599px) {
+        gap: 0.45rem;
+        font-size: 0.82rem;
+      }
+
+      &:hover,
+      &:focus-visible {
+        border-color: var(--landing-accent);
+      }
+    }
+
+    & strong {
+      flex-shrink: 0;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      background: var(--landing-accent);
+      color: var(--landing-accent-text);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  }
+
   /* AI assistant: text beside an example chat. */
   & .landing-ai {
     & .landing-ai__inner {
