@@ -28,9 +28,9 @@
   --brand-on-dark: #fff;          /* text on dark backgrounds */
 
   /* ── Accent ───────────────────────────────────────────────────────── */
-  --brand-accent: #0ffcbe;        /* buttons, highlights */
-  --brand-accent-hover: #5ffdd3;  /* button hover */
-  --brand-accent-text: #031a57;   /* text on accent buttons */
+  --brand-accent: #c8102e;        /* buttons, highlights (red from the hero SVG; was mint #0ffcbe) */
+  --brand-accent-hover: #a50d26;  /* button hover (was #5ffdd3) */
+  --brand-accent-text: #fff;      /* text on accent buttons (was #031a57) */
   --brand-accent-strong: #106ebe; /* links, small labels (readable on light backgrounds) */
 
   /* ── Backgrounds and lines ────────────────────────────────────────── */
