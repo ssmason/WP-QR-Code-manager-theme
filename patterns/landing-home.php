@@ -243,7 +243,7 @@
 <!-- wp:columns {"className":"landing-design-cards"} -->
 <div class="wp-block-columns landing-design-cards"><!-- wp:column {"className":"landing-card landing-card--atelier"} -->
 <div class="wp-block-column landing-card landing-card--atelier"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/atelier.jpg' ) ) ); ?>" alt="The Atelier design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/atelier.webp' ) ) ); ?>" alt="The Atelier design on a phone" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"className":"landing-card__tag"} -->
@@ -265,7 +265,7 @@
 
 <!-- wp:column {"className":"landing-card landing-card--studio"} -->
 <div class="wp-block-column landing-card landing-card--studio"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/studio.jpg' ) ) ); ?>" alt="The Studio design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/studio.webp' ) ) ); ?>" alt="The Studio design on a phone" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"className":"landing-card__tag"} -->
@@ -287,7 +287,7 @@
 
 <!-- wp:column {"className":"landing-card landing-card--noir"} -->
 <div class="wp-block-column landing-card landing-card--noir"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/noir.jpg' ) ) ); ?>" alt="The Noir design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/noir.webp' ) ) ); ?>" alt="The Noir design on a phone" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"className":"landing-card__tag"} -->
@@ -309,7 +309,7 @@
 
 <!-- wp:column {"className":"landing-card landing-card--bloom"} -->
 <div class="wp-block-column landing-card landing-card--bloom"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/bloom.jpg' ) ) ); ?>" alt="The Bloom design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/bloom.webp' ) ) ); ?>" alt="The Bloom design on a phone" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"className":"landing-card__tag"} -->
@@ -331,7 +331,7 @@
 
 <!-- wp:column {"className":"landing-card landing-card--mono"} -->
 <div class="wp-block-column landing-card landing-card--mono"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/mono.jpg' ) ) ); ?>" alt="The Mono design on a phone" width="585" height="2250" loading="lazy"/></figure>
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/mono.webp' ) ) ); ?>" alt="The Mono design on a phone" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"className":"landing-card__tag"} -->
@@ -354,7 +354,7 @@
 
 <!-- wp:group {"className":"landing-card landing-card--layouts"} -->
 <div class="wp-block-group landing-card landing-card--layouts"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/layouts.jpg' ) ) ); ?>" alt="A full menu page built from the ready-made layouts" width="585" height="2250" loading="lazy"/></figure>
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/layouts.webp' ) ) ); ?>" alt="A full menu page built from the ready-made layouts" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"className":"landing-card__tag"} -->
