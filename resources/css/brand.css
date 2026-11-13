@@ -15,9 +15,11 @@
  *   - Client page designs (the plugin's designs/ folder)
  */
 
-/* Fonts: loaded from Google Fonts. Change the families here and in the
-   font tokens below together. */
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+/* Fonts: Google Fonts, loaded by a <link> in the page head (with preconnects)
+   in resources/views/layouts/app.blade.php - not @import, which would make the
+   browser wait for this stylesheet first. The block editor loads them in
+   landing-editor.css. Change the families there and in the font tokens below
+   together. */
 
 :root {
   /* ── Core colours ─────────────────────────────────────────────────── */

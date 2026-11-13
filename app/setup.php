@@ -74,11 +74,12 @@ add_filter(
 );
 
 /**
- * Disable on-demand block asset loading.
+ * Load block CSS on demand: only the styles of blocks a page actually uses,
+ * instead of the whole block library (138 KB, render-blocking).
  *
  * @link https://core.trac.wordpress.org/ticket/61965
  */
-add_filter( 'should_load_separate_core_block_assets', '__return_false' );
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 
 /**
  * No emoji script or styles: browsers show emoji natively.
