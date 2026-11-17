@@ -137,7 +137,7 @@
 <!-- /wp:list -->
 
 <!-- wp:paragraph {"className":"landing-ai__note"} -->
-<p class="landing-ai__note">Included with Plus and Managed. Works with the AI app you already use.</p>
+<p class="landing-ai__note">Included with Plus. Works with the AI app you already use.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -410,7 +410,7 @@
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>Can I update my prices with AI?</summary><!-- wp:paragraph -->
-<p>Yes. Connect your page to ChatGPT or another AI app once from a computer, then tell it what to change from your phone. It can only edit your price list, page details and design, and you can undo any change. Included with Plus and Managed.</p>
+<p>Yes. Connect your page to ChatGPT or another AI app once from a computer, then tell it what to change from your phone. It can only edit your price list, page details and design, and you can undo any change. Included with Plus.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
