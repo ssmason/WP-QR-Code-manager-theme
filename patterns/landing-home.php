@@ -237,11 +237,161 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"landing-lead"} -->
-<p class="has-text-align-center landing-lead">Atelier, Studio, Noir, Bloom and Mono below, plus Harbour, Morning, Serene and Edge. Every design is a starting point. Change colours, fonts and layout to suit you, and switch whenever you like. Add ready-made layouts for photos and full menu pages.</p>
+<p class="has-text-align-center landing-lead">Ready-made pages in Noir, Harbour, Morning, Serene and Edge, or a simple price list in Atelier, Studio, Bloom and Mono. Every design is a starting point. Change colours, fonts and layout to suit you, and switch whenever you like.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:columns {"className":"landing-design-cards"} -->
-<div class="wp-block-columns landing-design-cards"><!-- wp:column {"className":"landing-card landing-card--atelier"} -->
+<!-- wp:heading {"textAlign":"center","level":3,"className":"landing-design-row__title"} -->
+<h3 class="wp-block-heading has-text-align-center landing-design-row__title">Six ready-made layouts</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","className":"landing-design-row__lead"} -->
+<p class="has-text-align-center landing-design-row__lead">Build a full menu page in a few clicks: a photo hero, menu sections, a two-column menu, a photo strip and a closing banner, or the whole page at once. Works with every design and looks right on phones.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns {"className":"landing-design-cards landing-design-cards--layouts"} -->
+<div class="wp-block-columns landing-design-cards landing-design-cards--layouts"><!-- wp:column {"className":"landing-card landing-card--noir"} -->
+<div class="wp-block-column landing-card landing-card--noir"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/noir.webp' ) ) ); ?>" alt="The Noir design on a phone" width="352" height="1354" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
+<p class="landing-card__tag">Bars &amp; restaurants</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Noir</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Moody and luxurious with gold accents.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-card__link"} -->
+<p class="landing-card__link"><a href="/obsidian-cocktail-bar/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"landing-card landing-card--harbour"} -->
+<div class="wp-block-column landing-card landing-card--harbour"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/harbour.webp' ) ) ); ?>" alt="The Harbour layout on a phone" width="352" height="1354" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
+<p class="landing-card__tag">Restaurants &amp; seafood</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Harbour</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A big photo hero, the menu in chapters with a photo strip between them and a harbour banner to finish.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-card__link"} -->
+<p class="landing-card__link"><a href="/the-anchor/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"landing-card landing-card--morning"} -->
+<div class="wp-block-column landing-card landing-card--morning"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/morning.webp' ) ) ); ?>" alt="The Morning layout on a phone" width="352" height="1354" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
+<p class="landing-card__tag">Cafés &amp; brunch</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Morning</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Text beside a big photo, the menu as cards, a row of photos and a "come and say hello" section.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-card__link"} -->
+<p class="landing-card__link"><a href="/sunday-kitchen/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"landing-card landing-card--serene"} -->
+<div class="wp-block-column landing-card landing-card--serene"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/serene.webp' ) ) ); ?>" alt="The Serene layout on a phone" width="352" height="1354" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
+<p class="landing-card__tag">Salons, spas &amp; nails</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Serene</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A soft photo hero, a short welcome, prices with dotted leaders and a booking panel.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-card__link"} -->
+<p class="landing-card__link"><a href="/stillwater-spa/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"landing-card landing-card--edge"} -->
+<div class="wp-block-column landing-card landing-card--edge"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/edge.webp' ) ) ); ?>" alt="The Edge layout on a phone" width="352" height="1354" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
+<p class="landing-card__tag">Barbers</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Edge</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Big condensed headlines, the price list in two columns, a photo strip and a brass banner.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-card__link"} -->
+<p class="landing-card__link"><a href="/ironside-barbers/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"landing-card landing-card--layouts"} -->
+<div class="wp-block-column landing-card landing-card--layouts"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
+<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/layouts.webp' ) ) ); ?>" alt="A full menu page built from the ready-made layouts" width="352" height="1354" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-card__tag"} -->
+<p class="landing-card__tag">Restaurants &amp; cafés</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Harbour Kitchen</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The complete example: a full menu page with headings, jump links and photos.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-card__link"} -->
+<p class="landing-card__link"><a href="/harbour-kitchen/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:heading {"textAlign":"center","level":3,"className":"landing-design-row__title"} -->
+<h3 class="wp-block-heading has-text-align-center landing-design-row__title">Or start simple</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","className":"landing-design-row__lead"} -->
+<p class="has-text-align-center landing-design-row__lead">Just your price list, beautifully styled. Add photos and ready-made sections whenever you like.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns {"className":"landing-design-cards landing-design-cards--starters"} -->
+<div class="wp-block-columns landing-design-cards landing-design-cards--starters"><!-- wp:column {"className":"landing-card landing-card--atelier"} -->
 <div class="wp-block-column landing-card landing-card--atelier"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
 <figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/atelier.webp' ) ) ); ?>" alt="The Atelier design on a phone" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
@@ -282,28 +432,6 @@
 
 <!-- wp:paragraph {"className":"landing-card__link"} -->
 <p class="landing-card__link"><a href="/fade-republic/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"className":"landing-card landing-card--noir"} -->
-<div class="wp-block-column landing-card landing-card--noir"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/noir.webp' ) ) ); ?>" alt="The Noir design on a phone" width="352" height="1354" loading="lazy"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"landing-card__tag"} -->
-<p class="landing-card__tag">Bars &amp; restaurants</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Noir</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Moody and luxurious with gold accents.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="/obsidian-cocktail-bar/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -350,29 +478,7 @@
 <p class="landing-card__link"><a href="/daily-grind-coffee/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
-<!-- /wp:columns -->
-
-<!-- wp:group {"className":"landing-card landing-card--layouts"} -->
-<div class="wp-block-group landing-card landing-card--layouts"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/layouts.webp' ) ) ); ?>" alt="A full menu page built from the ready-made layouts" width="352" height="1354" loading="lazy"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"landing-card__tag"} -->
-<p class="landing-card__tag">Restaurants &amp; cafés</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Plus six ready-made layouts</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Build a full menu page in a few clicks: a photo hero, menu sections, a two-column menu, a photo strip and a closing banner, or the whole page at once. Works with every design and looks right on phones.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="/harbour-kitchen/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
+<!-- /wp:columns --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"anchor":"faq","align":"wide","className":"landing-section landing-faq"} -->
