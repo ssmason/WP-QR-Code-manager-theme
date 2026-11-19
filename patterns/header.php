@@ -33,7 +33,9 @@
 
 <!-- wp:navigation-link {"label":"Contact","url":"/contact/","kind":"custom"} /-->
 
-<!-- wp:navigation-link {"label":"Log in","url":"<?php echo esc_url( wp_make_link_relative( wp_login_url() ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Register","url":"/register/","kind":"custom","className":"site-header__nav-cta"} /-->
+
+<!-- wp:navigation-link {"label":"Log in","url":"<?php echo esc_url( wp_make_link_relative( wp_login_url() ) ); ?>","kind":"custom","className":"site-header__nav-login"} /-->
 <!-- /wp:navigation -->
 
 <!-- wp:buttons -->

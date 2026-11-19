@@ -131,14 +131,188 @@
   /* Full-screen mobile menu: same colours as the header. (No backdrop-filter
      on .header-theme: it would trap this fixed overlay inside the header.) */
   & .wp-block-navigation__responsive-container.is-menu-open {
-    padding: 1.5rem var(--landing-gutter);
-    background-color: var(--landing-header-bg) !important;
+    isolation: isolate;
+    padding: 1.1rem var(--landing-gutter) 2rem;
+    background:
+      radial-gradient(60% 40% at 100% 100%, color-mix(in srgb, var(--landing-accent) 35%, transparent) 0%, transparent 70%),
+      radial-gradient(70% 45% at 0% 0%, color-mix(in srgb, var(--landing-text) 30%, transparent) 0%, transparent 70%),
+      var(--landing-header-bg) !important;
     color: var(--landing-header-text) !important;
-    font-size: 1.15rem;
+
+    /* Faint QR texture, bottom right. */
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: auto -10% -6% auto;
+      width: 85%;
+      aspect-ratio: 1;
+      background: var(--landing-header-text);
+      opacity: 0.12;
+      mask:
+        url("../images/landing/qr-pattern.svg") right bottom / 100% auto no-repeat,
+        radial-gradient(85% 85% at 100% 100%, #000 30%, transparent 75%);
+      mask-composite: intersect;
+      pointer-events: none;
+    }
+
+    & .wp-block-navigation__responsive-close,
+    & .wp-block-navigation__responsive-dialog {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    /* "Menu" label level with the close button. */
+    & .wp-block-navigation__responsive-dialog::before {
+      content: "Menu";
+      position: absolute;
+      top: 0.95rem;
+      left: 0;
+      color: color-mix(in srgb, var(--landing-header-text) 70%, transparent);
+      font-family: var(--landing-font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    & .wp-block-navigation__responsive-container-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding-top: 3.5rem;
+    }
+
+    & .wp-block-navigation__container {
+      counter-reset: site-nav;
+      flex: 1;
+      align-items: stretch !important;
+      width: 100%;
+      gap: 0 !important;
+    }
+
+    & .wp-block-navigation-item {
+      width: 100%;
+      animation: site-nav-in 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+      &:nth-child(2) { animation-delay: 45ms; }
+      &:nth-child(3) { animation-delay: 90ms; }
+      &:nth-child(4) { animation-delay: 135ms; }
+      &:nth-child(5) { animation-delay: 180ms; }
+      &:nth-child(6) { animation-delay: 225ms; }
+    }
+
+    /* Main links: large, numbered, with a divider and an arrow. */
+    & .wp-block-navigation-item:not(.site-header__nav-cta, .site-header__nav-login) > a {
+      counter-increment: site-nav;
+      display: flex;
+      align-items: baseline;
+      gap: 0.9rem;
+      width: 100%;
+      padding: 1rem 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--landing-header-text) 22%, transparent);
+      font-family: var(--landing-font-heading);
+      font-size: clamp(1.7rem, 8vw, 2.2rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+
+      &::before {
+        content: counter(site-nav, decimal-leading-zero);
+        color: color-mix(in srgb, var(--landing-header-text) 60%, transparent);
+        font-family: var(--landing-font-mono);
+        font-size: 0.75rem;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+      }
+
+      &::after {
+        content: "→";
+        margin-left: auto;
+        font-size: 1.3rem;
+        opacity: 0.55;
+        transition: transform 0.2s, opacity 0.2s;
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: inherit;
+
+        &::after {
+          opacity: 1;
+          transform: translateX(4px);
+        }
+      }
+    }
+
+    & .wp-block-navigation-item:first-child > a {
+      border-top: 1px solid color-mix(in srgb, var(--landing-header-text) 22%, transparent);
+    }
+
+    /* Register as a full-width button, Log in as a quiet link below it. */
+    & .site-header__nav-cta {
+      margin-top: auto;
+      padding-top: 2rem;
+
+      & > a {
+        display: block;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: 999px;
+        background: var(--landing-accent);
+        box-shadow: 0 10px 24px color-mix(in srgb, var(--landing-text) 30%, transparent);
+        color: var(--landing-accent-text);
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+
+        &:hover {
+          background: var(--landing-accent-hover);
+          color: var(--landing-accent-text);
+        }
+      }
+    }
+
+    & .site-header__nav-login > a {
+      display: block;
+      width: 100%;
+      padding: 1rem 0 0;
+      font-size: 1rem;
+      text-align: center;
+
+      &::before {
+        content: "Already a client? ";
+        opacity: 0.7;
+      }
+
+      &:hover {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      & .wp-block-navigation-item {
+        animation: none;
+      }
+    }
+  }
+
+  /* The header already has a Register button; this one is for the phone menu only. */
+  & .wp-block-navigation__responsive-container:not(.is-menu-open) .site-header__nav-cta {
+    display: none !important;
   }
 
   & .wp-block-buttons {
     margin: 0;
+  }
+}
+
+@keyframes site-nav-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
 }
 
