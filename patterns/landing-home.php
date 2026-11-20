@@ -313,9 +313,12 @@
 <!-- wp:paragraph {"className":"landing-card__link"} -->
 <p class="landing-card__link"><a href="/sunday-kitchen/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:column -->
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
 
-<!-- wp:column {"className":"landing-card landing-card--serene"} -->
+<!-- wp:details {"className":"landing-more"} -->
+<details class="wp-block-details landing-more"><summary>See all six layouts</summary><!-- wp:columns {"className":"landing-design-cards landing-design-cards--layouts"} -->
+<div class="wp-block-columns landing-design-cards landing-design-cards--layouts"><!-- wp:column {"className":"landing-card landing-card--serene"} -->
 <div class="wp-block-column landing-card landing-card--serene"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
 <figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/serene.webp' ) ) ); ?>" alt="The Serene layout on a phone" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
@@ -380,7 +383,8 @@
 <p class="landing-card__link"><a href="/harbour-kitchen/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
-<!-- /wp:columns -->
+<!-- /wp:columns --></details>
+<!-- /wp:details -->
 
 <!-- wp:heading {"textAlign":"center","level":3,"className":"landing-design-row__title"} -->
 <h3 class="wp-block-heading has-text-align-center landing-design-row__title">Or start simple</h3>

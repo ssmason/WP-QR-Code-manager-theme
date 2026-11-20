@@ -1031,10 +1031,55 @@
     margin-inline: auto;
   }
 
-  @media (min-width: 782px) and (max-width: 1199px) {
+  /* Ready-made layouts: three across, the other three behind "See all". */
+  @media (min-width: 782px) {
     & .landing-design-cards--layouts {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      max-width: 58rem;
+      margin-inline: auto;
+    }
+  }
+
+  & .landing-more {
+    margin: 1.25rem 0 0;
+
+    & > summary {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: fit-content;
+      margin-inline: auto;
+      padding: 0.7rem 1.4rem;
+      border: 1px solid var(--landing-border);
+      border-radius: 999px;
+      background: var(--landing-surface);
+      color: var(--landing-text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      list-style: none;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "↓";
+        color: var(--landing-accent);
+      }
+
+      &:hover,
+      &:focus-visible {
+        border-color: var(--landing-accent);
+        color: var(--landing-accent-strong);
+      }
+    }
+
+    /* Once open, all six show and the link goes away. */
+    &[open] > summary {
+      display: none;
     }
   }
 
@@ -1367,6 +1412,11 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0.75rem;
+
+      /* A row of three: the odd one out spans both columns. */
+      & > .landing-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+      }
 
       & .landing-card {
         padding: 0 0.85rem 1rem;
