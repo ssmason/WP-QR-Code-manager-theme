@@ -543,6 +543,12 @@
 <!-- /wp:details -->
 
 <!-- wp:details -->
+<details class="wp-block-details"><summary>What does the €39 set-up include?</summary><!-- wp:paragraph -->
+<p>We build your page for you. After you sign up, send us photos or a PDF of your menu, your logo and a few photos of your place through your dashboard. We set up your price list, design and details and have your page ready within 2 working days. It's a one-off fee, paid when you sign up.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
 <details class="wp-block-details"><summary>How do I get started?</summary><!-- wp:paragraph -->
 <p>Choose a plan and start your 30-day free trial. Your account is ready straight away and we email you a link to set your password.</p>
 <!-- /wp:paragraph --></details>
