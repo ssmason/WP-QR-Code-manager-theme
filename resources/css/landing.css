@@ -679,6 +679,7 @@
   & .landing-hero__art + .landing-hero__note {
     margin-top: 0.75rem;
     text-align: center;
+    text-wrap: balance;
   }
 
   /* Steps: each card is laid out like a QR code. The numbered square is the

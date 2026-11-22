@@ -47,7 +47,7 @@
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"className":"landing-hero__note"} -->
-<p class="landing-hero__note">No website needed · Works on every phone · No app to download</p>
+<p class="landing-hero__note">No&nbsp;website&nbsp;needed&nbsp;· Works&nbsp;on&nbsp;every&nbsp;phone&nbsp;· No&nbsp;app&nbsp;to&nbsp;download</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
