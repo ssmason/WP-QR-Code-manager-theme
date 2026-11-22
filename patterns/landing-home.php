@@ -23,7 +23,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">Your menu online. No website&nbsp;needed.</h1>
+<h1 class="wp-block-heading">Your price&nbsp;list, one scan or&nbsp;tap&nbsp;away.</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
