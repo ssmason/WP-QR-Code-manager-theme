@@ -23,11 +23,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">Your price&nbsp;list, one scan or&nbsp;tap&nbsp;away.</h1>
+<h1 class="wp-block-heading">Your menu online. No&nbsp;website&nbsp;needed.</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">Prices change. Your printed menu shouldn't have to. We make you a durable QR and NFC sign; customers scan or tap it and see your prices on a page that looks like your brand. Change a price once and it's live in seconds, with no reprinting ever.</p>
+<p class="landing-lead">One QR and NFC code with your live prices. Already have a website? It works there&nbsp;too.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
