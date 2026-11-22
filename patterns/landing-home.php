@@ -27,7 +27,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">One QR and NFC code with your live prices. Already have a website? It works there&nbsp;too.</p>
+<p class="landing-lead">Prices change. Your printed menu shouldn't have to. We make you a durable QR and NFC sign that opens your prices on a page in your brand. No website? This is it. Already have one? Your prices show there too. Change a price once and it's live everywhere, with no&nbsp;reprinting.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
