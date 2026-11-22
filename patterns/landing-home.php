@@ -38,17 +38,17 @@
 <!-- wp:button {"className":"is-style-outline","linkTarget":"_blank","rel":"noreferrer noopener"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/harbour-kitchen/" target="_blank" rel="noreferrer noopener">See an example</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons -->
-
-<!-- wp:paragraph {"className":"landing-hero__note"} -->
-<p class="landing-hero__note">No website needed · Works on every phone · No app to download</p>
-<!-- /wp:paragraph --></div>
+<!-- /wp:buttons --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-hero__art"} -->
 <figure class="wp-block-image size-full landing-hero__art"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/hero.svg' ) ) ); ?>" alt="Printed QR code signs opening a price list on a phone" width="520" height="520" fetchpriority="high"/></figure>
-<!-- /wp:image --></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"landing-hero__note"} -->
+<p class="landing-hero__note">No website needed · Works on every phone · No app to download</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->

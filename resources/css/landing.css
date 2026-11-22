@@ -675,6 +675,12 @@
     letter-spacing: 0.04em;
   }
 
+  /* Under the hero illustration, centred. */
+  & .landing-hero__art + .landing-hero__note {
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+
   /* Steps: each card is laid out like a QR code. The numbered square is the
      top-left finder; smaller finders sit top right and bottom left, and a
      small alignment square bottom right. */
@@ -1381,7 +1387,7 @@
 
     & .landing-hero__art img {
       width: auto;
-      max-height: calc(100svh - var(--landing-header-height) - 4rem);
+      max-height: calc(100svh - var(--landing-header-height) - 6rem);
     }
   }
 }
