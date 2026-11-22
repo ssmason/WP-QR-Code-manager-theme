@@ -59,7 +59,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">From printed code to live prices in three steps</h2>
+<h2 class="wp-block-heading has-text-align-center">From sign-up to live prices in three steps</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"className":"landing-steps"} -->
@@ -69,11 +69,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">We make your sign</h3>
+<h3 class="wp-block-heading">Set up your page, your way</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Table cards, stickers or window signs with your QR code and NFC tag built in, printed and posted to you ready to put out.</p>
+<p>Pick a design and add your logo and prices yourself in about twenty minutes. Or send your AI app a photo of your menu and it builds the whole page. Or leave it to us: we set it up for €39.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -83,11 +83,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">You make the page yours</h3>
+<h3 class="wp-block-heading">We make your codes</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Pick a design, add your logo and colours, and type in your services and prices. No technical skills needed.</p>
+<p>3D-printed QR codes in your page's colours, posted to you ready for tables, the counter or the window. Or print your own sign from your dashboard.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -115,16 +115,16 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">Change your prices by just asking</h2>
+<h2 class="wp-block-heading">Set up and update your page by just asking</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">Connect your page to ChatGPT or another AI app once, then update it from your phone in plain words. No logging in, no forms.</p>
+<p class="landing-lead">Connect your page to ChatGPT or another AI app once, then build it and keep it up to date in plain words, from your phone. No logging in, no forms.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"landing-ai__list"} -->
 <ul class="wp-block-list landing-ai__list"><!-- wp:list-item -->
-<li><strong>Set up in minutes.</strong> Send a photo of your menu and it builds your price list.</li>
+<li><strong>Your whole page in minutes.</strong> Send a photo of your menu and your website: it builds your price list and sets your logo, colours, fonts and links.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
@@ -132,7 +132,7 @@
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><strong>Safe by design.</strong> It can only change your price list, page details and design, and every change can be undone.</li>
+<li><strong>Safe by design.</strong> It can only change your own page, never your billing, and every change can be undone.</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
@@ -144,19 +144,19 @@
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"className":"landing-chat","layout":{"type":"default"}} -->
 <div class="wp-block-group landing-chat"><!-- wp:paragraph {"className":"landing-chat__msg landing-chat__msg--you"} -->
-<p class="landing-chat__msg landing-chat__msg--you">Put the cocktails up 50 cents and Guinness is €5.50 now.</p>
+<p class="landing-chat__msg landing-chat__msg--you">Here's our menu. Use the logo and colours from harbourkitchen.com and set up my page.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-chat__msg"} -->
-<p class="landing-chat__msg">Done. 8 cocktails are 50c dearer and Guinness is €5.50. It's live on your page now. Say "undo" to put it back.</p>
+<p class="landing-chat__msg">Done: 6 sections and 42 items, your logo, your blue as the accent and the Harbour design. It's live on your page now.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-chat__msg landing-chat__msg--you"} -->
-<p class="landing-chat__msg landing-chat__msg--you">Add Sunday roast to Mains, €14.95.</p>
+<p class="landing-chat__msg landing-chat__msg--you">Guinness is €5.50 now, and add Sunday roast to Mains at €14.95.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-chat__msg"} -->
-<p class="landing-chat__msg">Added "Sunday roast" to Mains at €14.95.</p>
+<p class="landing-chat__msg">Done. Guinness is €5.50 and Sunday roast is in Mains at €14.95. Say "undo" to put it back.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
