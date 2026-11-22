@@ -83,11 +83,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">We make your codes</h3>
+<h3 class="wp-block-heading">We make your QR and NFC codes</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>3D-printed QR codes in your page's colours, posted to you ready for tables, the counter or the window. Or print your own sign from your dashboard.</p>
+<p>3D-printed codes in your page's colours, each with a QR code to scan and an NFC tag to tap, posted to you ready for tables, the counter or the window. Or print your own QR sign from your dashboard.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
