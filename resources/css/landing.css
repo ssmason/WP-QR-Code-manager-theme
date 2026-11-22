@@ -1297,7 +1297,7 @@
   }
 
   /* Contact page: the Home hero's soft brand gradient with a faint QR texture
-     top right and bottom left, behind the intro and the form. */
+     top right, behind the intro and the form. */
   &:has(> .wp-block-satori-manifest-contact-form) {
     position: relative;
     isolation: isolate;
@@ -1309,8 +1309,7 @@
       radial-gradient(40% 50% at 10% 20%, color-mix(in srgb, var(--landing-ink-soft) 6%, transparent) 0%, transparent 70%),
       var(--landing-bg);
 
-    &::before,
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       z-index: -1;
@@ -1318,9 +1317,6 @@
       opacity: calc(var(--brand-hero-pattern-strength) * 1.4);
       mask-composite: intersect;
       pointer-events: none;
-    }
-
-    &::before {
       inset: -4% -4% auto auto;
       width: min(55%, 760px);
       aspect-ratio: 1;
@@ -1329,13 +1325,9 @@
         radial-gradient(85% 85% at 100% 0, #000 30%, transparent 75%);
     }
 
-    &::after {
-      inset: auto auto -6% -4%;
-      width: min(38%, 520px);
-      aspect-ratio: 1;
-      mask:
-        url("../images/landing/qr-pattern.svg") left bottom / 100% auto no-repeat,
-        radial-gradient(85% 85% at 0 100%, #000 25%, transparent 75%);
+    /* Once the message is sent, the thank-you replaces the intro's lead. */
+    &:has(.sm-form-notice--success) .landing-lead {
+      display: none;
     }
 
     & > .landing-small-print:last-child {
