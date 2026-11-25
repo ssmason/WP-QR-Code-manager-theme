@@ -3,7 +3,7 @@
  * Title: Landing - Home
  * Slug: qr-code-manager/landing-home
  * Categories: featured
- * Description: Marketing home page: hero, how it works, features, designs, FAQ and call to action. Use with the Landing page template.
+ * Description: Marketing home page: hero, how it works, features, AI assistant, designs, pricing, FAQ and call to action. Use with the Landing page template.
  * Block Types: core/post-content
  * Inserter: true
  *
@@ -73,7 +73,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Pick a design and add your logo and prices yourself in about twenty minutes. Or send your AI app a photo of your menu and it builds the whole page. Or leave it to us: we set it up for €39.</p>
+<p>Pick a design and add your logo and prices yourself, or send your AI app a photo of your menu and it builds the page. Or leave it to us: we set it up for €39.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -101,43 +101,113 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Prices change? Update them in your dashboard from any device, or just tell your AI app, and every printed code shows the new list instantly.</p>
+<p>They scan the code or tap their phone and your menu opens straight away. Change a price later and every code shows it instantly.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:paragraph {"align":"center","className":"landing-steps__cta"} -->
+<p class="has-text-align-center landing-steps__cta">Register in 2 minutes. Go live the same day, or let us build it for you in 2 days.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/register/">Register your business</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph {"align":"center","className":"landing-hero__note"} -->
+<p class="has-text-align-center landing-hero__note">Start free for 30&nbsp;days</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"landing-band"} -->
+<div class="wp-block-group alignfull landing-band"><!-- wp:group {"align":"wide","className":"landing-section"} -->
+<div class="wp-block-group alignwide landing-section"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">Built for busy owners</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns {"className":"landing-features"} -->
+<div class="wp-block-columns landing-features"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Always up to date</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Edit once and it's live on every sign you've put out.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Looks like your brand</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Your logo, colours and fonts on a professionally designed page.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">No website needed</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Use it on its own, or link it from your existing website.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Your contact details</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Opening hours, address, phone, social links and a booking button in one place.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Fast on every phone</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Lightweight pages that open instantly, with no app or sign-up for your customers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Your own private login</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A simple dashboard just for your page. Nobody else can see or change it.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"anchor":"ai-assistant","align":"wide","className":"landing-section landing-ai"} -->
 <div id="ai-assistant" class="wp-block-group alignwide landing-section landing-ai"><!-- wp:columns {"verticalAlignment":"center","className":"landing-ai__inner"} -->
 <div class="wp-block-columns are-vertically-aligned-center landing-ai__inner"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"className":"landing-eyebrow"} -->
-<p class="landing-eyebrow">New · AI assistant</p>
+<p class="landing-eyebrow">AI assistant · Included with Plus</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">Set up and update your page by just asking</h2>
+<h2 class="wp-block-heading">Update your page by just asking</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">Connect your page to ChatGPT or another AI app once, then build it and keep it up to date in plain words, from your phone. No logging in, no forms.</p>
+<p class="landing-lead">Connect ChatGPT or another AI app once. Send it a photo of your menu and it builds your page, or type "Guinness is €5.50" and it's live straight away. It can only change your own page, never your billing, and every change can be undone.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:list {"className":"landing-ai__list"} -->
-<ul class="wp-block-list landing-ai__list"><!-- wp:list-item -->
-<li><strong>Your whole page in minutes.</strong> Send a photo of your menu and your website: it builds your price list and sets your logo, colours, fonts and links.</li>
-<!-- /wp:list-item -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/register/">Start free with Plus</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
 
-<!-- wp:list-item -->
-<li><strong>Quick changes.</strong> "Guinness is €5.50" or "cocktails up 5%", live straight away.</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li><strong>Safe by design.</strong> It can only change your own page, never your billing, and every change can be undone.</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph {"className":"landing-ai__note"} -->
-<p class="landing-ai__note">Included with Plus. Works with the AI app you already use.</p>
+<!-- wp:paragraph {"className":"landing-hero__note"} -->
+<p class="landing-hero__note">30-day free&nbsp;trial · €15/month · Works with the AI app you already&nbsp;use</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -163,89 +233,17 @@
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"full","className":"landing-band"} -->
-<div class="wp-block-group alignfull landing-band"><!-- wp:group {"align":"wide","className":"landing-section"} -->
-<div class="wp-block-group alignwide landing-section"><!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Everything you need, nothing you don't</h2>
-<!-- /wp:heading -->
-
-<!-- wp:columns {"className":"landing-features"} -->
-<div class="wp-block-columns landing-features"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Always up to date</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>No reprinting when prices change. Edit once and it's live on every sign you've put out.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Looks like your brand</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Your logo, colours and fonts on a professionally designed page.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">No website needed</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Use it as a standalone page, or link it to and from your existing website.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Your contact details</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Opening hours, address, phone, social links and a booking button in one place.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Fast on every phone</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Lightweight pages that open instantly. No app and no sign-up for your customers.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Your own private login</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>A simple dashboard just for your page. Nobody else can see or change it.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group -->
-
 <!-- wp:group {"anchor":"designs","align":"wide","className":"landing-section landing-section--sand"} -->
 <div id="designs" class="wp-block-group alignwide landing-section landing-section--sand"><!-- wp:paragraph {"align":"center","className":"landing-eyebrow"} -->
 <p class="has-text-align-center landing-eyebrow">Designs</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Nine looks to start from</h2>
+<h2 class="wp-block-heading has-text-align-center">Nine designs to start from</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"landing-lead"} -->
-<p class="has-text-align-center landing-lead">Ready-made pages in Noir, Harbour, Morning, Serene and Edge, or a simple price list in Atelier, Studio, Bloom and Mono. Every design is a starting point. Change colours, fonts and layout to suit you, and switch whenever you like.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"textAlign":"center","level":3,"className":"landing-design-row__title"} -->
-<h3 class="wp-block-heading has-text-align-center landing-design-row__title">Six ready-made layouts</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center","className":"landing-design-row__lead"} -->
-<p class="has-text-align-center landing-design-row__lead">Build a full menu page in a few clicks: a photo hero, menu sections, a two-column menu, a photo strip and a closing banner, or the whole page at once. Works with every design and looks right on phones.</p>
+<p class="has-text-align-center landing-lead">Five full pages with photos and four simple price lists, for bars, restaurants, cafés, salons and barbers. Change colours, fonts and layout to suit you, and switch whenever you like.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"className":"landing-design-cards landing-design-cards--layouts"} -->
@@ -317,7 +315,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:details {"className":"landing-more"} -->
-<details class="wp-block-details landing-more"><summary>See all six layouts</summary><!-- wp:columns {"className":"landing-design-cards landing-design-cards--layouts"} -->
+<details class="wp-block-details landing-more"><summary>Browse all nine designs</summary><!-- wp:columns {"className":"landing-design-cards landing-design-cards--layouts"} -->
 <div class="wp-block-columns landing-design-cards landing-design-cards--layouts"><!-- wp:column {"className":"landing-card landing-card--serene"} -->
 <div class="wp-block-column landing-card landing-card--serene"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
 <figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/serene.webp' ) ) ); ?>" alt="The Serene layout on a phone" width="352" height="1354" loading="lazy"/></figure>
@@ -362,40 +360,7 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"className":"landing-card landing-card--layouts"} -->
-<div class="wp-block-column landing-card landing-card--layouts"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
-<figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/layouts.webp' ) ) ); ?>" alt="A full menu page built from the ready-made layouts" width="352" height="1354" loading="lazy"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"landing-card__tag"} -->
-<p class="landing-card__tag">Restaurants &amp; cafés</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Harbour Kitchen</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>The complete example: a full menu page with headings, jump links and photos.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"landing-card__link"} -->
-<p class="landing-card__link"><a href="/harbour-kitchen/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></details>
-<!-- /wp:details -->
-
-<!-- wp:heading {"textAlign":"center","level":3,"className":"landing-design-row__title"} -->
-<h3 class="wp-block-heading has-text-align-center landing-design-row__title">Or start simple</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center","className":"landing-design-row__lead"} -->
-<p class="has-text-align-center landing-design-row__lead">Just your price list, beautifully styled. Add photos and ready-made sections whenever you like.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:columns {"className":"landing-design-cards landing-design-cards--starters"} -->
-<div class="wp-block-columns landing-design-cards landing-design-cards--starters"><!-- wp:column {"className":"landing-card landing-card--atelier"} -->
+<!-- wp:column {"className":"landing-card landing-card--atelier"} -->
 <div class="wp-block-column landing-card landing-card--atelier"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-card__preview"} -->
 <figure class="wp-block-image size-full landing-card__preview"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/designs/atelier.webp' ) ) ); ?>" alt="The Atelier design on a phone" width="352" height="1354" loading="lazy"/></figure>
 <!-- /wp:image -->
@@ -482,7 +447,108 @@
 <p class="landing-card__link"><a href="/daily-grind-coffee/" target="_blank" rel="noreferrer noopener">See it live →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
-<!-- /wp:columns --></div>
+<!-- /wp:columns --></details>
+<!-- /wp:details --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"anchor":"pricing","align":"wide","className":"landing-section landing-pricing"} -->
+<div id="pricing" class="wp-block-group alignwide landing-section landing-pricing"><!-- wp:paragraph {"align":"center","className":"landing-eyebrow"} -->
+<p class="has-text-align-center landing-eyebrow">Pricing</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">Two simple plans, 30 days free</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns {"className":"landing-plans"} -->
+<div class="wp-block-columns landing-plans"><!-- wp:column {"className":"landing-card landing-plan"} -->
+<div class="wp-block-column landing-card landing-plan"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Starter</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"landing-plan__price"} -->
+<p class="landing-plan__price">€12 <span>/ month</span></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-plan__year"} -->
+<p class="landing-plan__year">or €120 a year, 2 months free</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"landing-plan__list"} -->
+<ul class="wp-block-list landing-plan__list"><!-- wp:list-item -->
+<li>Your own menu or price list page</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>One printed QR code, posted to you</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Nine designs, your logo and colours</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Update prices any time, from any device</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>PDF price lists and printable QR signs</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/register/">Start free for 30 days</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"landing-card landing-plan landing-plan--plus"} -->
+<div class="wp-block-column landing-card landing-plan landing-plan--plus"><!-- wp:paragraph {"className":"landing-plan__badge"} -->
+<p class="landing-plan__badge">Most popular</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Plus</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"landing-plan__price"} -->
+<p class="landing-plan__price">€15 <span>/ month</span></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"landing-plan__year"} -->
+<p class="landing-plan__year">or €150 a year, 2 months free</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"landing-plan__list"} -->
+<ul class="wp-block-list landing-plan__list"><!-- wp:list-item -->
+<li>Everything in Starter</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>AI assistant: update your page by chat</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Three printed QR codes, posted to you</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Priority support</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/register/">Start free for 30 days</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:paragraph {"align":"center","className":"landing-pricing__note"} -->
+<p class="has-text-align-center landing-pricing__note">Cancel any time. Want us to build your page? Add our set-up service for €39, one-off.</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"anchor":"faq","align":"wide","className":"landing-section landing-faq"} -->
@@ -493,7 +559,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">Questions</h2>
+<h2 class="wp-block-heading">Frequently asked questions</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
@@ -507,20 +573,26 @@
 
 <!-- wp:column {"className":"landing-faq__list"} -->
 <div class="wp-block-column landing-faq__list"><!-- wp:details -->
-<details class="wp-block-details"><summary>Do I need a website?</summary><!-- wp:paragraph -->
-<p>No. Your price list page works perfectly on its own. If you do have a website, you can add links between the two.</p>
+<details class="wp-block-details"><summary>How much does it cost?</summary><!-- wp:paragraph -->
+<p>Starter is €12 a month or €120 a year. Plus, with the AI assistant, is €15 a month or €150 a year. Both start with a 30-day free trial, and you can add our €39 set-up service if you'd like us to build your page.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
 <!-- wp:details -->
-<details class="wp-block-details"><summary>What happens when my prices change?</summary><!-- wp:paragraph -->
-<p>Log in, edit your prices and save. Your printed QR code always opens the latest version, so there is nothing to reprint.</p>
+<details class="wp-block-details"><summary>Can I cancel any time?</summary><!-- wp:paragraph -->
+<p>Yes. Cancel from your dashboard whenever you like, with no notice period. Cancel during the free trial and you pay nothing.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
 <!-- wp:details -->
-<details class="wp-block-details"><summary>Can I update my prices with AI?</summary><!-- wp:paragraph -->
-<p>Yes. Connect your page to ChatGPT or another AI app once from a computer, then tell it what to change from your phone. It can only edit your price list, page details and design, and you can undo any change. Included with Plus.</p>
+<details class="wp-block-details"><summary>What if a code gets damaged?</summary><!-- wp:paragraph -->
+<p>Order a new one from your dashboard. It opens the same page, so nothing else changes. You can also print a paper QR sign yourself at any time.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Do I own my menu?</summary><!-- wp:paragraph -->
+<p>Yes. Your menu, photos and logo stay yours, and you can download your price list as a PDF whenever you like.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
@@ -550,7 +622,7 @@
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>How do I get started?</summary><!-- wp:paragraph -->
-<p>Choose a plan and start your 30-day free trial. Your account is ready straight away and we email you a link to set your password.</p>
+<p>Choose a plan and start your 30-day free trial. You add your card when you sign up and your first payment is taken when the trial ends. Your account is ready straight away and we email you a link to set your password.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></div>
 <!-- /wp:column --></div>
@@ -563,12 +635,16 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">It takes two minutes to register. We'll do the rest.</p>
+<p class="has-text-align-center">Register in 2 minutes. We'll do the rest.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/register/">Register your business</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph {"align":"center","className":"landing-hero__note"} -->
+<p class="has-text-align-center landing-hero__note">30-day free&nbsp;trial · Cancel any&nbsp;time</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->

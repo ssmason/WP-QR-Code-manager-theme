@@ -1289,6 +1289,107 @@
     }
   }
 
+  /* Call to action under the three steps. */
+  & .landing-steps__cta {
+    margin: 2rem 0 1.25rem;
+    color: var(--landing-muted);
+    text-wrap: balance;
+  }
+
+  & .landing-steps__cta ~ .landing-hero__note {
+    margin-top: 0.75rem;
+  }
+
+  /* Pricing: two plan cards side by side, Plus highlighted. */
+  & .landing-plans {
+    max-width: 52rem;
+    margin: 2rem auto 0;
+    gap: 1.5rem;
+  }
+
+  & .landing-plan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    & h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    & .wp-block-buttons {
+      margin-top: auto;
+    }
+
+    & .wp-block-button,
+    & .wp-block-button__link {
+      width: 100%;
+    }
+  }
+
+  & .landing-plan--plus {
+    border: 2px solid var(--landing-accent);
+  }
+
+  & .landing-plan__badge {
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    margin: 0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background: var(--landing-accent);
+    color: var(--landing-accent-text);
+    font-family: var(--landing-font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    transform: translateY(-50%);
+  }
+
+  & .landing-plan__price {
+    margin: 0;
+    color: var(--landing-text);
+    font-family: var(--landing-font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+
+    & span {
+      color: var(--landing-muted);
+      font-family: var(--landing-font-body);
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  & .landing-plan__year {
+    margin: 0.25rem 0 1.25rem;
+    color: var(--landing-muted);
+    font-size: 0.9rem;
+  }
+
+  & .landing-plan__list {
+    margin: 0 0 1.5rem;
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+
+    & li {
+      margin-bottom: 0.4rem;
+      padding-left: 0.3rem;
+      list-style: "✓";
+    }
+
+    & li::marker {
+      color: var(--landing-accent);
+      font-weight: 700;
+    }
+  }
+
+  & .landing-pricing__note {
+    margin: 1.5rem 0 0;
+    color: var(--landing-muted);
+    font-size: 0.9rem;
+  }
+
   /* Closing call to action */
   & .landing-cta {
     padding: clamp(3.5rem, 9vw, 6rem) var(--landing-gutter);
