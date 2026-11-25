@@ -19,15 +19,15 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"landing-eyebrow"} -->
-<p class="landing-eyebrow">QR &amp; NFC price lists and menus</p>
+<p class="landing-eyebrow">QR &amp; NFC menus and price lists</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">Your price&nbsp;list, one scan or&nbsp;tap&nbsp;away.</h1>
+<h1 class="wp-block-heading">Your menu and prices, one scan or&nbsp;tap&nbsp;away.</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"landing-lead"} -->
-<p class="landing-lead">Prices change. Your printed menu shouldn't have to. We make you a durable QR and NFC sign that opens your prices on a page in your brand. No website? This is it. Already have one? Your prices show there too. Change a price once and it's live everywhere, with no&nbsp;reprinting.</p>
+<p class="landing-lead">Change a price once and it's live on every table, counter and window. Durable QR and NFC signs that open your menu in your brand. No reprinting, no app, no website&nbsp;needed.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -38,17 +38,17 @@
 <!-- wp:button {"className":"is-style-outline","linkTarget":"_blank","rel":"noreferrer noopener"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/harbour-kitchen/" target="_blank" rel="noreferrer noopener">See an example</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph {"className":"landing-hero__note"} -->
+<p class="landing-hero__note">30-day free&nbsp;trial · From&nbsp;€12/month · Works on any&nbsp;phone</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"landing-hero__art"} -->
-<figure class="wp-block-image size-full landing-hero__art"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/hero.svg' ) ) ); ?>" alt="Printed QR code signs opening a price list on a phone" width="520" height="520" fetchpriority="high"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"landing-hero__note"} -->
-<p class="landing-hero__note">No&nbsp;website&nbsp;needed&nbsp;· Works&nbsp;on&nbsp;every&nbsp;phone&nbsp;· No&nbsp;app&nbsp;to&nbsp;download</p>
-<!-- /wp:paragraph --></div>
+<figure class="wp-block-image size-full landing-hero__art"><img src="<?php echo esc_url( wp_make_link_relative( \Illuminate\Support\Facades\Vite::asset( 'resources/images/landing/hero.svg' ) ) ); ?>" alt="QR and NFC menu signs opening a digital menu on a phone" width="520" height="520" fetchpriority="high"/></figure>
+<!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->

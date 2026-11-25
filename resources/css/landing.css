@@ -675,6 +675,11 @@
     letter-spacing: 0.04em;
   }
 
+  /* Trust line under the hero buttons. */
+  & .wp-block-buttons + .landing-hero__note {
+    margin-top: 1rem;
+  }
+
   /* Under the hero illustration, centred. */
   & .landing-hero__art + .landing-hero__note {
     margin-top: 0.75rem;
